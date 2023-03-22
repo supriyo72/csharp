@@ -1,0 +1,49 @@
+using System;
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        char a='A';
+        char b='2';
+        char c='@';
+
+        Console.WriteLine(a);
+        Console.WriteLine(b);
+
+        int i= sizeof(char);
+        Console.WriteLine(i);
+
+        string s1= "Aman";
+        string s2= "@#$%&^";
+        string s3= "12345";
+
+        Console.WriteLine("Hello, World!");
+        Console.WriteLine(s1);
+        Console.WriteLine(s2);
+        Console.WriteLine(s3);
+
+        string str1= "World";
+        string str2= @"c:\localdisk\aman.txt";
+        Console.WriteLine(str2);
+        string str3= $"Hello {str1} code is: {s3} and name is {s1}";
+        Console.WriteLine(str3);
+
+        string n= Console.ReadLine();
+        Console.WriteLine(n);
+
+    }
+}
+
+
+
+//output
+//A2
+//2
+//Hello, World!
+//Aman
+//@#$%&^
+//12345
+//c:\localdisk\aman.txt
+//Hello World code is: 12345 and name is Aman
+//raja
+//raja

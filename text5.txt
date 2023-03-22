@@ -1,0 +1,32 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int a=10;
+        int b= a++;
+        Console.WriteLine($"postfix++ :b={b},a={a}");
+        int c=15;
+        int d= ++c;
+        Console.WriteLine($"prefix++ :d={d},c={c}");
+        
+        int e=10;
+        int f= e--;
+        Console.WriteLine($"postfix-- :f={f},e={e}");
+        int g=15;
+        int h= --g;
+        Console.WriteLine($"prefix-- :h={h},g={g}");
+        
+        
+    }
+}
+
+//o/p
+// postfix++ :b=10,a=11
+// prefix++ :d=16,c=16
+// postfix-- :f=10,e=9
+// prefix-- :h=14,g=14

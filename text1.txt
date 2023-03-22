@@ -1,0 +1,48 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int i= 10;
+        Console.WriteLine(i);
+        int j= int.Parse(Console.ReadLine());
+        Console.WriteLine(j);
+
+        int a=56;
+        short s= 20;
+        long l= 1000;
+        uint ui= 12;
+        Console.WriteLine(ui);
+
+        int ia= (int)l;
+        short ss= (short)i;
+        Console.WriteLine(ia);
+        Console.WriteLine(ss);
+
+        float f= 23.344F;
+        decimal d=223.883M;
+        double dd=344.2323;
+        Console.WriteLine(f);
+        Console.WriteLine(d);
+
+        float ff= (float)dd;
+        Console.WriteLine(ff);
+
+    }
+}
+
+
+//output
+//10
+//9
+//9
+// 1012
+// 1000
+// 10
+// 23.344
+// 223.883
+// 344.2323

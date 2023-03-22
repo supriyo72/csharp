@@ -1,0 +1,28 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("before assigment: ");
+        bool b= true;
+        Console.WriteLine(b);
+        
+        b= bool.Parse(Console.ReadLine());
+        Console.WriteLine("After assigment: ");
+        Console.WriteLine(b);
+        before assigment:
+
+
+    }
+}
+
+//OUTPUT:
+//before assigment:
+// True
+// false
+// After assigment:
+// False

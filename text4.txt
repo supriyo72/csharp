@@ -1,0 +1,39 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        string [] days= new string[] 
+        {
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+        };
+        Console.WriteLine(days[0]);
+        Console.WriteLine(days[6]);
+        
+        string [] friends;
+        friends= new string[4];
+        friends[0]="Sachin";
+        friends[1]="Mali";
+        
+        Console.WriteLine(friends[1]);
+        
+        int len= friends.Length;
+        Console.WriteLine(len);
+    }
+}
+
+//o/p
+//Sunday
+//Saturday
+//Mali
+//4
