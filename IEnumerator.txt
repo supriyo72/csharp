@@ -1,0 +1,47 @@
+using System;
+using System.Collections;
+using System.Collections;
+using System.Collections.Generic;
+
+public class Customer
+{
+    public int Custid{get; set;}
+    public string Custname{get; set;}
+    public double CustBal{get; set;}
+}
+public class Dealer : IEnumerable
+{
+    List<Customer> cust = new List<Customer>();
+    public void Buy(Customer c)
+    {
+        cust.Add(c);
+    }
+    public IEnumerator GetEnumerator()
+    {
+        return cust.GetEnumerator();
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        
+        Customer c1= new Customer{Custid=234,Custname="Supriyo",CustBal=38751.930};
+        Customer c2= new Customer{Custid=568,Custname="Kalpesh",CustBal=40000.30};
+        Customer c3= new Customer{Custid=105,Custname="Khushal",CustBal=25000.00};
+
+        Dealer cust= new Dealer();
+        cust.Buy(c1);
+        cust.Buy(c2);
+        cust.Buy(c3);
+
+        foreach(Customer obj in cust)
+        {
+            Console.WriteLine("Id: "+obj.Custid+" "+"Name: "+obj.Custname+" "+"Balance: "+obj.CustBal);
+        }
+    }
+}
+//op
+Id: 234 Name: Supriyo Balance: 38751.93
+Id: 568 Name: Kalpesh Balance: 40000.3
+Id: 105 Name: Khushal Balance: 25000

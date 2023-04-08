@@ -1,0 +1,257 @@
+
+using System;
+
+public class Program
+{
+    public void show()
+    {
+        int a=10;
+        int b=5;
+        int c=a+b;
+        Console.WriteLine(c);
+    }
+    public void show(int a,int b)
+    {
+        int c= a-b;
+        Console.WriteLine(c);
+    }
+    public void show(string a,string b)
+    {
+        string c= a+" "+b;
+        Console.WriteLine(c);
+    }
+    public void show(float a,float b)
+    {
+        float c= a+b;
+        Console.WriteLine(c);
+    }
+    public static void Main(string[] args)
+    {
+        Program obj= new Program();
+        obj.show();
+        obj.show(16,8);
+        obj.show("Supriyo","Ghosh");
+        obj.show(12.3f,8.09f);
+
+    }
+}
+
+//op
+15
+8
+Supriyo Ghosh
+20.39
+.......................................................................
+using System;
+
+public class Program
+{
+    
+    public void show(int a,int b)
+    {
+        int c= a-b;
+        Console.WriteLine(c);
+    }
+    public float show(float a,float b)
+    {
+        float c= a+b;
+        return c;
+    }
+    public static void Main(string[] args)
+    {
+        Program obj= new Program();
+        obj.show(16,8);
+        Console.WriteLine(obj.show(12.3f,8.09f));
+
+    }
+}
+//op
+8
+20.39
+
+...........................................................................
+
+using System;
+
+public class Program
+{
+    
+    public void show(int a,int b)
+    {
+        int c= a-b;
+        Console.WriteLine(c);
+    }
+    public float show(int a,int b) ////////ERROR      ERROR      ERROR////////
+    {
+        iint c= a+b;
+        return c;
+    }
+    public static void Main(string[] args)
+    {
+        Program obj= new Program();
+        obj.show(16,8);
+        Console.WriteLine(obj.show(12,8));
+
+    }
+}
+
+//op
+ERROR
+
+............................................................................
+using System;
+
+class parent{
+    public void shoW()
+    {
+        Console.WriteLine("I am a parent class");
+    }
+}
+class child: parent{
+    //public new void shoW()   -->same o/p
+    public void shoW()
+    {
+        Console.WriteLine("I am a child class");
+    }
+
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        child obj = new child();
+        obj.shoW();
+    }
+}
+//op
+I am a child class
+..............................................................................
+using System;
+
+class parent{
+    public void shoW()
+    {
+        Console.WriteLine("I am a parent class");
+    }
+}
+class child: parent{
+    public new void shoW()
+    {
+        base.shoW();
+    }
+
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        child obj = new child();
+        obj.shoW();
+    }
+}
+//op  I am a parent class
+................................................................................
+using System;
+
+class parent{
+    public void shoW()
+    {
+        Console.WriteLine("I am a parent class");
+    }
+}
+class child: parent{
+    public new void shoW()
+    {
+        Console.WriteLine("I am a child class");
+    }
+
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        child obj = new child();
+        ((parent)obj).shoW();
+    }
+}
+//op  I am a parent class
+..............................................................................
+using System;
+
+class parent{
+    public void shoW()
+    {
+        Console.WriteLine("I am a parent class");
+    }
+}
+class child: parent{
+    public new void shoW()
+    {
+        Console.WriteLine("I am a child class");
+    }
+
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        parent obj = new child();
+        obj.shoW();
+    }
+}
+//op   I am a parent class
+.................................................................................
+// O v e R R I D I N G
+
+using System;
+
+class parent{
+    public virtual void shoW()
+    {
+        Console.WriteLine("I am a parent class");
+    }
+}
+class child: parent{
+    public override void shoW()
+    {
+        Console.WriteLine("I am a child class");
+    }
+
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        parent obj = new child();
+        obj.shoW();
+    }
+}
+
+//op I am a child class
+.....................................................................................
+using System;
+
+class parent{
+    public virtual void shoW()
+    {
+        Console.WriteLine("I am a parent class");
+    }
+}
+class child: parent{
+    public override void shoW()
+    {
+        base.shoW();
+    }
+
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        parent obj = new child();
+        obj.shoW();
+    }
+}
+
+//op I am a parent class
+..........................................................................................

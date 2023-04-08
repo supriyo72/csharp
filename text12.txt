@@ -1,0 +1,42 @@
+using System;
+class Staff{
+    public void status(decimal salary,ref decimal roughfees, out decimal finalfees)
+    {
+        salary=10000;
+        roughfees=10000;
+        finalfees=10000;
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Staff obj= new Staff();
+        decimal salary=5000;
+        decimal roughfees=5000;
+        decimal finalfees=5000;
+        
+        Console.WriteLine(salary);
+        Console.WriteLine(roughfees);
+        Console.WriteLine(finalfees);
+
+        obj.status(salary,ref roughfees,out finalfees);
+        
+        Console.WriteLine("After calculating");
+        Console.WriteLine(salary);
+        Console.WriteLine(roughfees);
+        Console.WriteLine(finalfees);
+
+
+    }
+}
+
+//op
+
+5000
+5000
+5000
+After calculating
+5000
+10000
+10000

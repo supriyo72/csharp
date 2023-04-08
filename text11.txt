@@ -1,0 +1,65 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+class Student{
+    public string name;
+    public int rollid;
+    public string FirstName;
+    public string Lastname;
+    public int pid;
+    
+    
+    public Student(){
+        Console.WriteLine("Aman gupta the richest shark");
+        rollid=45;
+        Lastname="Khan";
+    }
+    public int getId(){
+        return rollid;
+    }
+    public string getLN(){
+        return Lastname;
+    }
+    public Student(int id,string fn,string ln){
+        pid=id;
+        FirstName=fn;
+        Lastname=ln;
+    }
+    public int getPId(){
+        return pid;
+    }
+    public string getln(){
+        return FirstName;
+    }
+    public string getfn(){
+        return Lastname;
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+       
+        Student obj2=new Student();
+        Console.WriteLine(obj2.getId());
+        Console.WriteLine(obj2.getLN());
+        
+        Student obj3= new Student(1000,"Raja","Choudhary");
+        Console.WriteLine(obj3.getfn());
+        Console.WriteLine(obj3.getln());
+        Console.WriteLine(obj3.getPId());
+
+
+    }
+}
+
+//op
+
+Aman gupta the richest shark
+45
+Khan
+Choudhary
+Raja
+1000

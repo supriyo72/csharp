@@ -1,0 +1,249 @@
+// Single
+using System;
+class Base{
+    public void show1(){
+        Console.WriteLine("Base class");
+    }
+}
+class Derived: Base{
+    public void show2(){
+        Console.WriteLine("Derived class");
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Derived obj1=new Derived();
+        obj1.show1();
+        obj1.show2();
+    }
+}
+
+//op
+Base class
+Derived class
+......................................................
+
+
+//Hierarchy
+using System;
+class Base{
+    public void show1(){
+        Console.WriteLine("Base class");
+    }
+}
+class Derived1: Base{
+    public void show2(){
+        Console.WriteLine("Derived1 class");
+    }
+}
+class Derived2: Base{
+    public void show3(){
+        Console.WriteLine("Derived2 class");
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Derived1 obj1=new Derived1();
+        obj1.show1();
+        obj1.show2();
+        
+        Derived2 obj2=new Derived2();
+        obj2.show1();
+        obj2.show3();
+        
+    }
+}
+//op
+Base class
+Derived1 class
+Base class
+Derived2 class
+......................................................
+
+
+//multiple
+using System;
+class Base{
+    public void show1(){
+        Console.WriteLine("Base class");
+    }
+}
+class Derived1: Base{
+    public void show2(){
+        Console.WriteLine("Derived1 class");
+    }
+}
+class Derived2: Derived1{
+    public void show3(){
+        Console.WriteLine("Derived2 class");
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Derived2 obj2=new Derived2();
+        obj2.show1();
+        obj2.show2();
+        obj2.show3();
+        
+    }
+}
+//op
+Base class
+Derived1 class
+Derived2 class
+
+......................................................
+
+//super
+using System;
+class Base{
+    public Base(){
+        Console.WriteLine("A");
+    }
+    public Base(int a){
+        Console.WriteLine($"C: {a}");
+    }
+
+    public void show1(){
+        Console.WriteLine("Base class");
+    }
+}
+class Derived1: Base{
+    public Derived1(){
+        Console.WriteLine("B");
+    }
+    public Derived1(int b){
+        Console.WriteLine(b);
+    }
+    public void show2(){
+        Console.WriteLine("Derived1 class");
+    }
+}
+class Derived2: Derived1{
+    public Derived2(): base(26)
+    {
+        Console.WriteLine("C");
+    }
+    public void show3(){
+        Console.WriteLine("Derived2 class");
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Derived2 obj2=new Derived2();
+
+    }
+}
+//op
+A
+26
+C
+......................................................
+
+
+using System;
+class Base{
+    public Base(){
+        Console.WriteLine("A");
+    }
+    public Base(int b){
+        Console.WriteLine($"C:{b}");
+    }
+
+    public void show1(){
+        Console.WriteLine("Base class");
+    }
+}
+class Derived1: Base{
+    public Derived1(){
+        Console.WriteLine("B");
+    }
+    public Derived1(int a,int b){
+        Console.WriteLine($"{a}/{b}");
+    }
+    public void show2(){
+        Console.WriteLine("Derived1 class");
+    }
+}
+class Derived2: Derived1{
+    public Derived2(int a,int b): base(26,45)
+    {
+        Console.WriteLine($"C have a&b: {a} {b}");
+    }
+    public void show3(){
+        Console.WriteLine("Derived2 class");
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Derived2 obj2=new Derived2(100,56);
+
+    }
+}
+
+//op
+A
+26/45
+C have a&b: 100 56
+
+......................................................
+
+using System;
+class Base{
+    public Base(){
+        Console.WriteLine("A");
+    }
+    public Base(int b){
+        Console.WriteLine($"C:{b}");
+    }
+
+    public void show1(){
+        Console.WriteLine("Base class");
+    }
+}
+class Derived1: Base{
+    public Derived1(){
+        Console.WriteLine("B");
+    }
+    public Derived1(int a,int b):base(45)
+    {
+        Console.WriteLine($"{a}/{b}");
+    }
+    public void show2(){
+        Console.WriteLine("Derived1 class");
+    }
+}
+class Derived2: Derived1{
+    public Derived2(int a,int b,int c): base(26,45)
+    {
+        Console.WriteLine($"C have a&b: {a} {b} {c}");
+    }
+    public void show3(){
+        Console.WriteLine("Derived2 class");
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Derived2 obj2=new Derived2(100,56,90);
+
+    }
+}
+//op
+C:45
+26/45
+C have a&b: 100 56 90
+
+
+

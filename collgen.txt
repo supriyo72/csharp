@@ -1,0 +1,279 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+public class Customer
+{
+
+    public int Custid{get; set;}
+    public string Name{get; set;}
+    public double Roll{get; set;}
+
+
+    public static void Main(string[] args)
+    {
+        List<TypeOfValues>
+        List<int> li=new List<int>();
+        List<string> li=new List<string>();
+        List<Customer> li=new List<Customer>();
+
+
+    }
+}
+...............................................................................
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+public class Customer
+{
+    public static void Main(string[] args)
+    {
+        List<int> li =new List<int>();
+        li.Add(100); li.Add(200); li.Add(400);
+        li.Add(453); li.Add(874);
+
+        for(int i=0;i<li.Count;i++)
+        {
+            Console.Write(li[i]+" ");
+        }
+        Console.WriteLine();
+        li.Insert(2,7896);
+        li.Insert(3,5555);
+        foreach(int i in li){
+            Console.Write(i+" ");
+        }
+        Console.WriteLine();
+
+        li.RemoveAt(0);
+        foreach(int i in li){
+            Console.Write(i+" ");
+        }
+        Console.WriteLine();
+
+    }
+}
+//op
+100 200 400 453 874
+100 200 7896 5555 400 453 874
+200 7896 5555 400 453 874
+
+.............................................................................................
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+public class Customer
+{
+    public static void Main(string[] args)
+    {
+        // Dictionary<Tkey,Tvalues>
+        Dictionary<string,object> dt= new Dictionary<string,object>();
+        dt.Add("FirstName","Supriyo");
+        dt.Add("LastName","Ghosh");
+        dt.Add("alpha",'X');
+        dt.Add("pid",256);
+        dt.Add("Wing",3.5f);
+        dt.Add("College","SFIT");
+        dt.Add("Code",21.6);
+
+        foreach(string i in dt.Keys)
+        {
+            Console.WriteLine(i+": "+dt[i]);
+        }
+    }
+}
+
+//op
+FirstName: Supriyo
+LastName: Ghosh
+alpha: X
+pid: 256
+Wing: 3.5
+College: SFIT
+Code: 21.6
+
+.................................................................................
+using System;
+using System.Collections;
+using System.Collections;
+using System.Collections.Generic;
+
+public class Customer
+{
+    public int Custid{get; set;}
+    public string Custname{get; set;}
+    public double CustBal{get; set;}
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        List<Customer> cust= new List<Customer>();
+        Customer c1= new Customer{Custid=234,Custname="Supriyo",CustBal=38751.930};
+        Customer c2= new Customer{Custid=568,Custname="Kalpesh",CustBal=40000.30};
+        Customer c3= new Customer{Custid=105,Custname="Khushal",CustBal=25000.00};
+
+        cust.Add(c1);
+        cust.Add(c2);
+        cust.Add(c3);
+
+        foreach(Customer obj in cust)
+        {
+            Console.WriteLine("Id: "+obj.Custid+" "+"Name: "+obj.Custname+" "+"Balance: "+obj.CustBal);
+        }
+    }
+}
+
+
+//op
+Id: 234 Name: Supriyo Balance: 38751.93
+Id: 568 Name: Kalpesh Balance: 40000.3
+Id: 105 Name: Khushal Balance: 25000
+
+.................................................................
+using System;
+using System.Collections;
+using System.Collections.Generic;
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Dictionary<string,string> myDict = new Dictionary<string,string>();
+        myDict.Add("Boat","Aman gupta");
+        myDict.Add("Sugar","Vineeta Singh");
+        myDict.Add("Cardekho","Amit Jain");
+        myDict.Add("Lenskart","Peyush bansal");
+        myDict.Add("Shaadi.com","Anupam mittal");
+        myDict.Add("Emcure","Namita Thapar");
+
+        foreach(KeyValuePair<string,string> item in myDict)
+        {
+            Console.WriteLine($"Keys: {item.Key} Values: {item.Value}");
+        }
+
+
+    }
+}
+//op
+Keys: Boat Values: Aman gupta
+Keys: Sugar Values: Vineeta Singh
+Keys: Cardekho Values: Amit Jain
+Keys: Lenskart Values: Peyush bansal
+Keys: Shaadi.com Values: Anupam mittal
+Keys: Emcure Values: Namita Thapar
+
+....................................................................................
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
+class Employee
+{
+    public int id{get; set;}
+    public string name{get; set;}
+    public int salary{get; set;}
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Employee emp1 = new Employee()
+        {
+            id=45,
+            name="Supriyo",
+            salary=40000
+        };
+        Employee emp2 = new Employee()
+        {
+            id=24,
+            name="raj",
+            salary=56000
+        };
+        Employee emp3 = new Employee()
+        {
+            id=87,
+            name="kanan",
+            salary=24500
+        };
+    Dictionary<int,Employee> myEmployees= new Dictionary<int,Employee>();
+    myEmployees.Add(emp1.id,emp1);
+    myEmployees.Add(emp2.id,emp2);
+    myEmployees.Add(emp3.id,emp3);
+
+    Console.WriteLine(myEmployees.Count(emp => emp.Value.salary>45000));
+    Console.WriteLine(myEmployees.Count(emp => emp.Value.name.StartsWith("k")));
+
+
+    }
+}
+//op
+1
+1
+...............................................................
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Text;
+//key cannot be null
+//key cannot be duplicate
+
+class Employee
+{
+    public int id{get; set;}
+    public string name{get; set;}
+    public int salary{get; set;}
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Dictionary<string,string> myDict = new Dictionary<string,string>();
+        myDict.Add("Boat","Aman gupta");
+        myDict.Add("Sugar","Vineeta Singh");
+        myDict.Add("Cardekho","Amit Jain");
+        myDict.Add("Lenskart","Peyush bansal");
+        myDict.Add("Shaadi.com","Anupam mittal");
+        myDict.Add("Emcure","Namita Thapar");
+        
+        string value;
+        myDict.TryGetValue("shaadi.com",out value);
+        Console.WriteLine(value);
+        
+        Console.WriteLine(myDict.ContainsKey("Boat"));
+        Console.WriteLine(myDict.ContainsValue("Amit Jain"));
+
+        
+        foreach(KeyValuePair<string,string> item in myDict)
+        {
+            Console.WriteLine($"Keys: {item.Key} Values: {item.Value}");
+        }
+        myDict.Remove("Emcure");
+        Console.WriteLine("After Removal");
+        foreach(KeyValuePair<string,string> item in myDict)
+        {
+            Console.WriteLine($"Keys: {item.Key} Values: {item.Value}");
+        }
+        
+    
+
+    }
+}
+//op
+Anupam Mittal
+True
+True
+Keys: Boat Values: Aman gupta
+Keys: Sugar Values: Vineeta Singh
+Keys: Cardekho Values: Amit Jain
+Keys: Lenskart Values: Peyush bansal
+Keys: Shaadi.com Values: Anupam mittal
+Keys: Emcure Values: Namita Thapar
+After Removal
+Keys: Boat Values: Aman gupta
+Keys: Sugar Values: Vineeta Singh
+Keys: Cardekho Values: Amit Jain
+Keys: Lenskart Values: Peyush bansal
+Keys: Shaadi.com Values: Anupam mittal

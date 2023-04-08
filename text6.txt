@@ -1,0 +1,42 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int input= int.Parse(Console.ReadLine());
+        
+        Console.WriteLine("for loop");
+        for(int i=0;i<input && i<5;i++){
+            Console.WriteLine(i);
+        }
+        
+        Console.WriteLine("While loop");
+        int j=0;
+        while(j<5 && j<input){
+            Console.WriteLine(j);
+            j++;
+        }
+        Console.WriteLine("do-While loop");
+        int k=0;
+        do{
+            Console.WriteLine(k);
+            k++;
+        }while(k<5 && k<input);
+
+        Console.WriteLine("For-each");
+        string []str= new string[]
+        {
+            "Aman","Raj","Khushal","Ramjee","Peyush"
+        };
+        foreach(string s in str){
+            Console.WriteLine(s);
+        }
+        Console.WriteLine("End");
+        
+        
+    }
+}

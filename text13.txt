@@ -1,0 +1,71 @@
+using System;
+class Staff{
+    public int id;
+    public string fn;
+    public string ln;
+
+    public void College(int roll){
+        this.id=roll;
+    }
+    public void College(string FN,string LN){
+        this.fn=FN;
+        this.ln=LN;
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Staff obj= new Staff();
+        obj.College(45);
+        obj.College("Aman","Singh");
+        Console.WriteLine(obj.fn);
+        Console.WriteLine(obj.ln);
+        Console.WriteLine(obj.id);
+
+    }
+}
+
+//op
+Aman
+Singh
+45
+
+
+
+
+using System;
+class Staff{
+
+    public void College(){
+        Console.WriteLine("SFIT,Mumbai");
+    }
+    public void College(int roll){
+        Console.WriteLine($"Supu roll-id is {roll}");
+    }
+    public void College(string fn,string ln){
+        Console.WriteLine($"Selected candidate full name {fn} {ln}");
+    }
+    public static void show(string showmssg){
+        Console.WriteLine(showmssg);
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Staff obj= new Staff();
+        obj.College();
+        obj.College(27);
+        obj.College("Supriyo","Ghosh");
+        Staff.show("Hii");
+
+
+    }
+}
+
+//op
+SFIT,Mumbai
+Supu roll-id is 27
+Selected candidate full name Supriyo Ghosh
+Hii

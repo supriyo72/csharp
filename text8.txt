@@ -1,0 +1,71 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+class Student{
+    public string name;
+    public int rollid;
+    public string FirstName;
+    public string Lastname;
+    public int pid;
+    
+    public const int FeesId=46;
+    public readonly int UpiId=4761; //readonly can only be assigned in constructor.
+
+    public static int Refno=321; //cannot access through object have to use class name
+    public Student(){
+        // FeesId=19; //Error
+        int refupi=890;
+        UpiId=refupi;
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Student obj= new Student();
+        obj.name="Ram";
+        Console.WriteLine(obj.name);
+        
+        Student obj1= new Student(){
+            FirstName="Amandeep",
+            pid=193027
+        };
+        Console.WriteLine(obj1.pid);
+        // Console.WriteLine(obj1.FeesId); //Error
+        // obj1.UpiId= 890; //Error
+        Console.WriteLine(obj1.UpiId);
+        // Console.WriteLine(obj1.Refno); //error
+        Console.WriteLine(Student.Refno);
+        
+        
+        //Values and Reference Type:
+        Console.WriteLine("Value and Reference:");
+        int a=10;
+        Console.WriteLine(a);
+        int b=a;
+        b=20;
+        Console.WriteLine(a);
+
+        obj.Lastname="Ghosh";
+        Console.WriteLine(obj.Lastname);
+        obj1=obj;
+        obj1.Lastname="Das";
+        Console.WriteLine(obj.Lastname);
+
+    }
+}
+
+
+
+//o/p
+Ram
+193027
+890
+321
+Value and Reference:
+10
+10
+Ghosh
+Das

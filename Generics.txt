@@ -1,0 +1,327 @@
+using System;
+class compare
+{
+    public bool CompareTo(object a,object b){
+        if(a.Equals(b)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        compare obj=new compare();
+        bool result= obj.CompareTo(10,20);
+        Console.WriteLine(result);
+        compare obj1=new compare();
+        bool result1= obj.CompareTo(10.30,20.45);
+        Console.WriteLine(result1);
+        bool result1= obj.CompareTo(10.30f,20.45); //error
+
+//with object we can change the variable type without mentioning just by {object} but there is a type issue
+    }
+}
+//op
+False False
+
+............................................................................
+
+//<>
+using System;
+class compare
+{
+    public bool CompareTo<T>(T a,T b){
+        if(a.Equals(b)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        compare obj=new compare();
+        bool result= obj.CompareTo<int>(10,20);
+        Console.WriteLine(result);
+        compare obj1=new compare();
+        bool result1= obj.CompareTo<float>(10.30f,20.45f);
+        Console.WriteLine(result1);
+
+//with object we can change the variable type without mentioning just by {object} but there is a type issue
+    }
+}
+
+//op
+False
+False
+....................................................................
+
+
+using System;
+class compare
+{
+    public void Add<T>(T a,T b)
+    {
+        dynamic d1=a;
+        dynamic d2=b;
+        Console.WriteLine(d1+d2);
+    }
+    public void Mul<T>(T a,T b)
+    {
+        dynamic d1=a;
+        dynamic d2=b;
+        Console.WriteLine(d1*d2);
+    }
+    public void Div<T>(T a,T b)
+    {
+        dynamic d1=a;
+        dynamic d2=b;
+        Console.WriteLine(d1/d2);
+    }
+
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        compare obj=new compare();
+        obj.Add<int>(10,20);
+        obj.Add<double>(10.34,56.245);
+        obj.Div<int>(45,3);
+        obj.Mul<float>(3.50f,4.25f);
+
+    }
+}
+
+//op
+30
+66.585
+15
+14.875
+
+......................................................................
+using System;
+class compare<T>
+{
+    public void Add(T a,T b)
+    {
+        dynamic d1=a;
+        dynamic d2=b;
+        Console.WriteLine(d1+d2);
+    }
+    public void Mul(T a,T b)
+    {
+        dynamic d1=a;
+        dynamic d2=b;
+        Console.WriteLine(d1*d2);
+    }
+    public void Div(T a,T b)
+    {
+        dynamic d1=a;
+        dynamic d2=b;
+        Console.WriteLine(d1/d2);
+    }
+    
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        compare<int> obj=new compare<int>();
+        obj.Add(10,20);
+        obj.Div(45,3);
+        obj.Mul(2,25);
+        
+    
+    }
+}
+
+//op
+30
+15
+50
+
+.....................................................
+using System;
+class compare
+{
+    public static bool CompareTo(object a,object b){
+        return a.Equals(b);
+    
+    }
+
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        bool result= compare.CompareTo(10,20);
+        Console.WriteLine(result);
+    }
+}
+
+//op
+False
+.................................................................
+using System;
+class compare
+{
+    public static bool CompareTo<T>(T a,T b){
+        dynamic d1=a;
+        dynamic d2=b;
+        return d1.Equals(d2);
+    
+    }
+
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        bool result= compare.CompareTo<int>(10,20);
+        Console.WriteLine(result);
+    }
+}
+//op
+False
+......................................................................
+using System;
+class compare
+{
+    public static bool CompareTo<T>(T a,T b){
+        dynamic d1=a;
+        dynamic d2=b;
+        return d1.Equals(d2);
+    
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        bool result= compare.CompareTo<int>(10,10);
+        if(result){
+            Console.WriteLine("Equal");
+        }else{
+            Console.WriteLine("Not Equal");
+        }
+    }
+}
+//op
+Equal
+.............................................................................
+using System;
+class compare<T>
+{
+    public static bool CompareTo(T a,T b){
+        dynamic d1=a;
+        dynamic d2=b;
+        return d1.Equals(d2);
+    
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        bool result= compare<int>.CompareTo(10,10);
+        if(result){
+            Console.WriteLine("Equal");
+        }else{
+            Console.WriteLine("Not Equal");
+        }
+    }
+}
+//op
+Equal
+......................................................................................................
+using System;
+class compare<AnyDataType>
+{
+    public bool CompareTo(AnyDataType a,AnyDataType b){
+        dynamic d1=a;
+        dynamic d2=b;
+        if(d1.Equals(d2)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        compare<int> obj= new compare<int>();
+        bool res= obj.CompareTo(10,20);
+        Console.WriteLine(res);
+        
+        compare<string> obj1= new compare<string>();
+        bool res1= obj1.CompareTo("Aman","Aman");
+        Console.WriteLine(res1);
+        
+        compare<float> obj2= new compare<float>();
+        bool res2= obj2.CompareTo(10.45f,20.54f);
+        Console.WriteLine(res2);
+
+    }
+}
+//op
+False
+True
+False
+........................................................................................................
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        var mystack= new Stack();
+        mystack.Push("vol-1");
+        mystack.Push("vol-2");
+        mystack.Push("vol-3");
+        mystack.Push("vol-4");
+        mystack.Push("vol-5");
+        mystack.Push(45);
+        
+        var peekitem= mystack.Peek();
+        Console.WriteLine(peekitem);
+        
+        foreach(object obj in mystack)
+        {
+            Console.WriteLine(obj);
+        }
+        Console.WriteLine();
+        mystack.Pop();
+        Console.WriteLine("............................");
+        foreach(object obj in mystack)
+        {
+            Console.WriteLine(obj);
+        }
+        Console.WriteLine();
+    }
+}
+//op
+45
+45
+vol-5
+vol-4
+vol-3
+vol-2
+vol-1
+............................
+vol-5
+vol-4
+vol-3
+vol-2
+vol-1

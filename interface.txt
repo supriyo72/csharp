@@ -1,0 +1,160 @@
+//interface does not contains defination
+//intF methods are by-default public and abstract
+//interface cannot contain fields nor static
+//interface class does not have  object
+
+
+...................................................
+using System;
+
+interface Iemployee
+{
+    void show();
+}
+class LtiEmp : Iemployee
+{
+    public void show()
+    {
+        Console.WriteLine("Hello");
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        LtiEmp obj= new LtiEmp();
+        obj.show();
+    }
+}
+//op Hello
+...................................................
+
+using System;
+
+interface i1
+{
+    void print1();
+}
+interface i2
+{
+    void print2();
+}
+interface i3 : i1,i2
+{
+    void print3();
+}
+class Program : i3
+{
+    public void print1()
+    {
+        Console.WriteLine("Print-1");
+    }
+    public void print2()
+    {
+        Console.WriteLine("Print-2");
+    }
+    public void print3()
+    {
+        Console.WriteLine("Print-3");
+    }
+    
+    public static void Main(string[] args)
+    {
+        Program obj1 = new Program();
+        obj1.print1();
+        obj1.print2();
+        obj1.print3();
+        //i2 obj= new i2(); //error
+        // Cannot create an instance of the abstract type or interface
+        i2 obj2 = new Program();
+        obj2.print2();
+        
+        i3 obj3 = new Program();
+        obj3.print1();
+        obj3.print2();
+        obj3.print3();
+    }
+}
+
+//op
+Print-1
+Print-2
+Print-3
+Print-2
+Print-1
+Print-2
+Print-3
+
+...........................................................................................
+
+using System;
+interface i1{
+    void print1();
+}
+interface i2{
+    void print2();
+}
+class myClass : i1,i2{
+    public void print1(){
+        Console.WriteLine("Print-1 on myClass");
+    }
+    
+    void i2.print2(){
+        Console.WriteLine("Print-2 on myClass");
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        myClass obj1= new myClass();
+        obj1.print1();
+        ///obj1.print2();  //error
+        ((i2)obj1).print2();
+
+    }
+}
+
+//op
+print-1 on myClass
+Print-2 on myClass
+........................................................................
+using System;
+interface i1{
+    void print1();
+}
+interface i2{
+    void print2();
+}
+class myClass : i1,i2{
+    void i1.print1(){
+        Console.WriteLine("Print-1 on myClass");
+    }
+
+    void i2.print2(){
+        Console.WriteLine("Print-2 on myClass");
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        myClass obj1= new myClass();
+        ((i1)obj1).print1();
+        ((i2)obj1).print2();
+        Console.WriteLine(".....................");
+        i1 obj2 = new myClass();
+        obj2.print1();
+        i2 obj3 = new myClass();
+        obj3.print2();
+    }
+}
+//op
+
+Print-1 on myClass
+Print-2 on myClass
+.....................
+Print-1 on myClass
+Print-2 on myClass
+
+

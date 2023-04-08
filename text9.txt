@@ -1,0 +1,36 @@
+using System;
+
+class Student{
+    public string name;
+    public int rollid;
+    public string FirstName;
+    public string Lastname;
+    public int pid;
+
+    public string getName(){
+        return $"{FirstName} {Lastname}";
+    }
+
+    public Student(){
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Student obj= new Student();
+        obj.name="Ram";
+
+        Student obj1= new Student(){
+            FirstName="Amandeep",
+            Lastname="Singh",
+            pid=193027
+        };
+
+        Console.WriteLine(obj1.getName());
+
+    }
+}
+
+//op
+Amandeep Singh

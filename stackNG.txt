@@ -1,0 +1,221 @@
+using System;
+using System.Collections;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Stack mystack= new Stack();
+        mystack.Push("Raghu");
+        mystack.Push(27);
+        mystack.Push(27.52f);
+        mystack.Push("Mumbai");
+        mystack.Push("Journalism");
+        // mystack.Push("Raghu"); --duplicate allowed
+        // mystack.Push(null);     --Null allowed
+        Console.WriteLine(mystack.Contains("Adil"));
+        Console.WriteLine(mystack.Contains(27));
+
+        var peekitem= mystack.Peek();
+        Console.WriteLine(peekitem);
+        string peekit= mystack.Peek().ToString();
+        Console.WriteLine(peekit);
+        Console.WriteLine(mystack.Count);
+
+        foreach(object obj in mystack)
+        {
+            Console.WriteLine(obj);
+        }
+        Console.WriteLine();
+        mystack.Pop();
+        Console.WriteLine("............................");
+        foreach(object obj in mystack)
+        {
+            Console.WriteLine(obj);
+        }
+        Console.WriteLine();
+        mystack.Clear();
+        Console.WriteLine(".............................");
+        foreach(object obj in mystack)
+        {
+            Console.WriteLine(obj);
+        }
+        Console.WriteLine();
+
+    }
+}
+
+//op
+False
+True
+Journalism
+Journalism
+5
+Journalism
+Mumbai
+27.52
+27
+Raghu
+............................
+Mumbai
+27.52
+27
+Raghu
+
+
+............................................................................................
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        var mystack= new Stack<string>();
+        mystack.Push("vol-1");
+        mystack.Push("vol-2");
+        mystack.Push("vol-3");
+        mystack.Push("vol-4");
+        mystack.Push("vol-5");
+        // mystack.Push(45);  ----------------Error-----------------
+
+        var peekitem= mystack.Peek();
+        Console.WriteLine(peekitem);
+
+        foreach(object obj in mystack)
+        {
+            Console.WriteLine(obj);
+        }
+        Console.WriteLine();
+        mystack.Pop();
+        Console.WriteLine("............................");
+        foreach(object obj in mystack)
+        {
+            Console.WriteLine(obj);
+        }
+        Console.WriteLine();
+    }
+}
+..................................................................................................................................
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        var mystack= new Stack<string>();
+        mystack.Push("vol-1");
+        mystack.Push("vol-2");
+        mystack.Push("vol-3");
+        mystack.Push("vol-4");
+        mystack.Push("vol-5");
+        // mystack.Push(45);  ----------------Error-----------------
+
+        var peekitem= mystack.Peek();
+        Console.WriteLine(peekitem);
+        foreach(object obj in mystack)
+        {
+            Console.WriteLine(obj);
+        }
+        Console.WriteLine();
+        mystack.Pop();
+        Console.WriteLine("............................");
+        foreach(object obj in mystack)
+        {
+            Console.WriteLine(obj);
+        }
+        Console.WriteLine();
+    }
+}
+.........................................................................................................................
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Queue myq= new Queue();
+        //Duplicate and null values can be added
+        myq.Enqueue("KKR");
+        myq.Enqueue("MI");
+        myq.Enqueue("RCB");
+        myq.Enqueue(25);
+        myq.Enqueue(12.56f);
+        myq.Enqueue('X');
+
+
+        Console.WriteLine(myq.Count);
+        Console.WriteLine(myq.Peek());
+        Console.WriteLine(myq.Contains("KKR"));
+        foreach(object obj in myq)
+        {
+            Console.WriteLine(obj);
+        }
+        Console.WriteLine();
+        myq.Dequeue();
+        myq.Dequeue();
+        foreach(object obj in myq)
+        {
+            Console.WriteLine(obj);
+        }
+        Console.WriteLine();
+        Console.WriteLine(myq.Count);
+        Console.WriteLine(myq.Contains("KKR"));
+    }
+}
+//op
+6
+KKR
+True
+KKR
+MI
+RCB
+25
+12.56
+X
+RCB
+25
+12.56
+X
+4
+False
+..................................................................................................
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Queue myq= new Queue();
+        myq.Enqueue("KKR");
+        myq.Enqueue("MI");
+        myq.Enqueue("RCB");
+        myq.Enqueue(25);
+        myq.Enqueue(12.56f);
+        myq.Enqueue('X');
+
+        Console.WriteLine(myq.Count);
+        while(myq.Count>0)
+        {
+            Console.WriteLine(myq.Dequeue());
+        }
+        Console.WriteLine(myq.Count);
+    }
+}
+//op
+6
+KKR
+MI
+RCB
+25
+12.56
+X
+0
+.......................................................................................
