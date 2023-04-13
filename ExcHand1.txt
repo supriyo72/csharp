@@ -60,9 +60,6 @@ Enter no2
 12
 End of the Program
 ..................................................................................................
-// Online C# Editor for free
-// Write, Edit and Run your C# code using C# Online Compiler
-
 using System;
 
 public class TrycatchExp
@@ -93,4 +90,3 @@ System.ApplicationException: Divisor value can't be odd!!
   at TrycatchExp.Main (System.String[] args) [0x00038] in <76d49f88c8d549df818969e9a34c4aaf>:0
 [ERROR] FATAL UNHANDLED EXCEPTION: System.ApplicationException: Divisor value can't be odd!!
   at TrycatchExp.Main (System.String[] args) [0x00038] in <76d49f88c8d549df818969e9a34c4aaf>:0
-....................................................................................................
