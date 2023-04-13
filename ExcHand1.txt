@@ -90,3 +90,36 @@ System.ApplicationException: Divisor value can't be odd!!
   at TrycatchExp.Main (System.String[] args) [0x00038] in <76d49f88c8d549df818969e9a34c4aaf>:0
 [ERROR] FATAL UNHANDLED EXCEPTION: System.ApplicationException: Divisor value can't be odd!!
   at TrycatchExp.Main (System.String[] args) [0x00038] in <76d49f88c8d549df818969e9a34c4aaf>:0
+.....................................................................................................
+using System;
+
+public class TrycatchExp
+{
+    public static void Main(string[] args)
+    {
+            Console.WriteLine("Enter no1");
+            int x= int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter no2");
+            int y= int.Parse(Console.ReadLine());
+            
+            if(y%2 > 0)
+            {
+                throw new ApplicationException("Divisor value can't be odd!!");
+            }
+            int z=x/y;
+        Console.WriteLine($"Result : {z}");
+        Console.WriteLine("End of the Program");
+    }
+}
+
+//op
+Enter no1
+100
+Enter no2
+0
+Unhandled Exception:
+System.DivideByZeroException: Attempted to divide by zero.
+  at TrycatchExp.Main (System.String[] args) [0x00043] in <196dcf4aefbc46878d8188303118ed03>:0 
+[ERROR] FATAL UNHANDLED EXCEPTION: System.DivideByZeroException: Attempted to divide by zero.
+  at TrycatchExp.Main (System.String[] args) [0x00043] in <196dcf4aefbc46878d8188303118ed03>:0 
+.....................................................................................................
