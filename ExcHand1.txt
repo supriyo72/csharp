@@ -216,3 +216,47 @@ Enter no1
 Enter no2
 1
 Finally End of the Program
+............................................................................................
+using System;
+public class DivisorCannotBeOdd : ApplicationException
+{
+    public override string Message
+    {
+        get
+        {
+            return "Divisor value can't be odd!!";
+            
+        }
+    }
+}
+public class TrycatchExp
+{
+    public static void Main(string[] args)
+    {
+            Console.WriteLine("Enter no1");
+            int x= int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter no2");
+            int y= int.Parse(Console.ReadLine());
+            
+            if(y%2 > 0)
+            {
+                throw new DivisorCannotBeOdd();
+            }
+            int z=x/y;
+        Console.WriteLine($"Result : {z}");
+        Console.WriteLine("End of the Program");
+    }
+}
+
+//op
+Enter no1
+154
+Enter no2
+13
+Unhandled Exception:
+DivisorCannotBeOdd: Divisor value can't be odd!!
+  at TrycatchExp.Main (System.String[] args) [0x0003d] in <bc994dd822694f709ea7f4a752b04012>:0 
+[ERROR] FATAL UNHANDLED EXCEPTION: DivisorCannotBeOdd: Divisor value can't be odd!!
+  at TrycatchExp.Main (System.String[] args) [0x0003d] in <bc994dd822694f709ea7f4a752b04012>:0 
+..........................................................................................................
+
