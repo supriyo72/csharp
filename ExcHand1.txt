@@ -259,4 +259,33 @@ DivisorCannotBeOdd: Divisor value can't be odd!!
 [ERROR] FATAL UNHANDLED EXCEPTION: DivisorCannotBeOdd: Divisor value can't be odd!!
   at TrycatchExp.Main (System.String[] args) [0x0003d] in <bc994dd822694f709ea7f4a752b04012>:0 
 ..........................................................................................................
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+public class UserInfoException : Exception
+{
+    public UserInfoException():base()
+    {}
+    public UserInfoException(string message) : base(message)
+    {}
+    public UserInfoException(string message, Exception innerException) : base(message,innerException)
+    {}
+    public UserInfoException(SerializationInfo info,StreamingContext context) : base(info,context)
+    {}
+}
+public class TrycatchExp
+{
+    public static void Main(string[] args)
+    {
+        try{
+            throw new UserInfoException("No duplicates allowed");
+        }catch(UserInfoException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
+
+//op
+No duplicates allowed
 
