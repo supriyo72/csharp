@@ -317,3 +317,39 @@ System.Exception: You are not eligible
   at TrycatchExp.Main (System.String[] args) [0x00033] in <4a8a7f76ce6e443f80bf5932d53f8633>:0 
 [ERROR] FATAL UNHANDLED EXCEPTION: System.Exception: You are not eligible
   at TrycatchExp.Main (System.String[] args) [0x00033] in <4a8a7f76ce6e443f80bf5932d53f8633>:0 
+  
+  ..............................................................................................................
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+public class TrycatchExp
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter Account balance: ");
+        int acc= int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter withdrawl amount: ");
+        int withd= int.Parse(Console.ReadLine());
+        
+        
+        if(acc<withd)
+        {
+            throw new Exception("Withdrawl amount higher than the balance amount");
+        }
+        else{
+            int Totacc=acc-withd;
+            Console.WriteLine($"Total balance remaining: {Totacc}");
+        }
+        
+    }
+}
+
+//op
+Enter Account balance: 
+1000
+Enter withdrawl amount: 5000
+Unhandled Exception:
+System.Exception: Withdrawl amount higher than the balance amount
+  at TrycatchExp.Main (System.String[] args) [0x00036] in <c4af36286cdd4922a67769f81ba7d62f>:0 
+[ERROR] FATAL UNHANDLED EXCEPTION: System.Exception: Withdrawl amount higher than the balance amount
+  at TrycatchExp.Main (System.String[] args) [0x00036] in <c4af36286cdd4922a67769f81ba7d62f>:0 
