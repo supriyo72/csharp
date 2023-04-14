@@ -318,7 +318,40 @@ System.Exception: You are not eligible
 [ERROR] FATAL UNHANDLED EXCEPTION: System.Exception: You are not eligible
   at TrycatchExp.Main (System.String[] args) [0x00033] in <4a8a7f76ce6e443f80bf5932d53f8633>:0 
   
-  ..............................................................................................................
+.......................................................................................................
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+public class TrycatchExp
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter your age: ");
+        int age= int.Parse(Console.ReadLine());
+        
+        
+        try{
+            if(age>=18)
+            {
+                Console.WriteLine("Eligible");
+            }
+            else
+            {
+                throw new Exception("You are not eligible");
+            }
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
+//op
+
+Enter your age: 
+12
+You are not eligible
+.................................................................................................................
 using System;
 using System.IO;
 using System.Runtime.Serialization;
@@ -353,3 +386,51 @@ System.Exception: Withdrawl amount higher than the balance amount
   at TrycatchExp.Main (System.String[] args) [0x00036] in <c4af36286cdd4922a67769f81ba7d62f>:0 
 [ERROR] FATAL UNHANDLED EXCEPTION: System.Exception: Withdrawl amount higher than the balance amount
   at TrycatchExp.Main (System.String[] args) [0x00036] in <c4af36286cdd4922a67769f81ba7d62f>:0 
+  
+  //op
+  
+  Enter Account balance: 
+10000
+Enter withdrawl amount: 
+2000
+Total balance remaining: 8000
+
+....................................................................................................................
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+public class TrycatchExp
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter Account balance: ");
+        int acc= int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter withdrawl amount: ");
+        int withd= int.Parse(Console.ReadLine());
+        
+        try{
+            if(acc<withd)
+            {
+                throw new Exception("Withdrawl amount higher than the balance amount");
+            }
+            else{
+                int Totacc=acc-withd;
+                Console.WriteLine($"Total balance remaining: {Totacc}");
+            }
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        
+    }
+}
+
+//op
+
+Enter Account balance: 
+1000
+Enter withdrawl amount: 
+5000
+Withdrawl amount higher than the balance amount
+
