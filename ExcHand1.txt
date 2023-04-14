@@ -289,3 +289,31 @@ public class TrycatchExp
 //op
 No duplicates allowed
 
+............................................................................................
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+public class TrycatchExp
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter your age: ");
+        int age= int.Parse(Console.ReadLine());
+        
+        if(age>=18)
+        {
+            Console.WriteLine("Eligible");
+        }else{
+            throw new Exception("You are not eligible");
+        }
+    }
+}
+
+//op
+Enter your age: 
+14
+Unhandled Exception:
+System.Exception: You are not eligible
+  at TrycatchExp.Main (System.String[] args) [0x00033] in <4a8a7f76ce6e443f80bf5932d53f8633>:0 
+[ERROR] FATAL UNHANDLED EXCEPTION: System.Exception: You are not eligible
+  at TrycatchExp.Main (System.String[] args) [0x00033] in <4a8a7f76ce6e443f80bf5932d53f8633>:0 
