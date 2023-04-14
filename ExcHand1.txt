@@ -33,6 +33,46 @@ Enter no1
 100
 Enter no2
 777777777777777777777777777777777
+
+.............................................................................................................................
+using System;
+
+public class TrycatchExp
+{
+    public static void Main(string[] args)
+    {
+        try{
+            Console.WriteLine("Enter no1");
+            int x= int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter no2");
+            int y= int.Parse(Console.ReadLine());
+            if(y==1)
+            {
+                return;
+            }
+            int z=x/y;
+            Console.WriteLine($"The result is: {z}");
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            Console.WriteLine("Tata Bye Bye");
+        }
+        finally
+        {
+            Console.WriteLine("Finally End of the Program");
+        }
+        Console.WriteLine("DONE");
+    }
+}
+
+//op
+Enter no1
+100
+Enter no2
+1
+Finally End of the Program
+...............................................................................................
 Value was either too large or too small for an Int32.
 Tata Bye Bye
 End of the Program
@@ -123,3 +163,58 @@ System.DivideByZeroException: Attempted to divide by zero.
 [ERROR] FATAL UNHANDLED EXCEPTION: System.DivideByZeroException: Attempted to divide by zero.
   at TrycatchExp.Main (System.String[] args) [0x00043] in <196dcf4aefbc46878d8188303118ed03>:0 
 .....................................................................................................
+
+using System;
+
+public class TrycatchExp
+{
+    public static void Main(string[] args)
+    {
+        try{
+            Console.WriteLine("Enter no1");
+            int x= int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter no2");
+            int y= int.Parse(Console.ReadLine());
+            int z=x/y;
+            Console.WriteLine($"The result is: {z}");
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            Console.WriteLine("Tata Bye Bye");
+        }
+        finally
+        {
+            Console.WriteLine("Finally End of the Program");
+        }
+    }
+
+}
+//op
+Enter no1
+500
+Enter no2
+25
+5
+The result is: 20
+Finally End of the Program
+
+//op
+Enter no1
+500
+Enter no2
+m
+Input string was not in a correct format.
+Tata Bye Bye
+Finally End of the Program
+
+//op
+Enter no1
+200
+Enter no2
+777777777777777777777777777777
+Value was either too large or too small for an Int32.
+Tata Bye Bye
+Finally End of the Program
+
+
