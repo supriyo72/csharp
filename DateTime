@@ -1,0 +1,24 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        string a= "cognitus";
+        Console.WriteLine($"Sumon is working at {a}");
+        DateTime dt = DateTime.Now;
+        
+        Console.WriteLine("{0:d}",dt);
+        Console.WriteLine($"{dt:D}");
+        Console.WriteLine($"{dt:T}");
+        Console.WriteLine($"{dt:t}");
+        Console.WriteLine($"{dt:f}");
+        Console.WriteLine($"{dt:F}");
+        Console.WriteLine($"{dt:y}");
+        Console.WriteLine($"{dt:yyyy}");
+        Console.WriteLine($"{dt:yy}");
+        Console.WriteLine($"{dt:g}");
+        Console.WriteLine($"{dt:G}");
+        
+    }
+}
