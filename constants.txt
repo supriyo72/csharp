@@ -1,0 +1,14 @@
+using System;
+
+public class HelloWorld
+{
+    const string name= "Supriyo";
+    public static void Main(string[] args)
+    {
+        // name="Sumon";   -->Error
+        string name1= "Aman";
+        Console.WriteLine(name);  //o/p Supriyo
+        Console.WriteLine(name1); //o/p Aman
+        
+    }
+}
