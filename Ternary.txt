@@ -1,0 +1,15 @@
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Your Age?");
+        int age= int.Parse(Console.ReadLine());
+        
+        string res= (age>=18) ? "Eligible" : "Not Eligible";
+        Console.WriteLine(res);
+        
+    }
+}
