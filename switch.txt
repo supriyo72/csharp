@@ -1,0 +1,24 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Select your menu: ");
+        string menu= Console.ReadLine();
+        
+        switch(menu)
+        {
+            case "veg":
+                Console.WriteLine("You have selected veg");
+                break;
+            case "non Veg":
+                Console.WriteLine("You have selected Non-veg");
+                break;
+            default:
+                Console.WriteLine("You have selected invalid option");
+                break;
+        }
+        Console.WriteLine("Thank U");
+    }
+}
