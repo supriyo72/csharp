@@ -1,0 +1,41 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Maths marks: ");
+        int maths= int.Parse(Console.ReadLine());
+        Console.WriteLine("chemistry marks: ");
+        int chem= int.Parse(Console.ReadLine());
+        Console.WriteLine("Physics marks: ");
+        int phy= int.Parse(Console.ReadLine());
+        
+        int count=0;
+        if(maths<35)
+        {
+            count+=1;
+        }
+        if(chem<35)
+        {
+            count+=1;
+        }
+        if(phy<35)
+        {
+            count+=1;
+        }
+        
+        Console.WriteLine($"You are failed in {count} subjects out of 3");
+    }
+}
+
+
+
+//op
+Maths marks: 
+58
+chemistry marks: 
+45
+Physics marks: 
+36
+You are failed in 0 subjects out of 3
