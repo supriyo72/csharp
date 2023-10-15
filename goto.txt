@@ -1,0 +1,27 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        for(int i=1;i<=10;i++)
+        {
+            if(i==5)
+            {
+                goto stop;
+            }
+            Console.WriteLine(i);
+        }
+        Console.WriteLine("Program ends");
+        
+        stop:
+        Console.WriteLine("GOTO Activated");
+    }
+}
+
+o/p
+1
+2
+3
+4
+GOTO Activated
