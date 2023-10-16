@@ -1,0 +1,29 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int [,] multiarr= new int[3,4]
+        {
+            {25,45,78,4},
+            {10,20,145,74},
+            {12,65,7,5}
+        };
+        
+        // Console.WriteLine(multiarr.Length);  -->12
+        // Console.WriteLine(multiarr.Rank);    -->2
+        // Console.WriteLine(multiarr.GetLength(0)); -->3
+        // Console.WriteLine(multiarr.GetLength(1));  -->4
+        
+        
+        for(int i=0; i<multiarr.GetLength(0);i++)
+        {
+            for(int j=0; j<multiarr.GetLength(1);j++)
+            {
+                Console.Write(multiarr[i,j]+" ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
