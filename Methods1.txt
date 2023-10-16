@@ -1,0 +1,34 @@
+using System;
+
+class Program
+{
+    public void show()
+    {
+        Console.WriteLine("Hello bhailogh");
+    }
+    public void greet()
+    {
+        Console.WriteLine("Good Night");
+    }
+    public static void meet1()
+    {
+        Console.WriteLine("Google meet");
+    }
+    public static void roll(int roll1,int roll2,int roll3)
+    {
+        Console.WriteLine($"Aman:{roll1},Raj:{roll2},kanak:{roll3}");
+    }
+    public static void name(string name1="Supriyo",string name2="Kalpesh")
+    {
+        Console.WriteLine($"{name1} and {name2} lives in bhayander");
+    }
+    public static void Main(string[] args)
+    {
+       Program obj= new Program();
+       obj.show();
+       obj.greet();
+       Program.meet1();
+       Program.roll(25,27,56);
+       Program.name();
+    }
+}
