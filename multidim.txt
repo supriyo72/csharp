@@ -25,5 +25,11 @@ public class HelloWorld
             }
             Console.WriteLine();
         }
+
+//foreach
+        foreach (int items in multiarr)
+        {
+            Console.Write(items+" ");
+        }
     }
 }
