@@ -1,0 +1,43 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Select your menu: ");
+        string menu;
+        menu= Console.ReadLine();
+        switch(menu)
+        {
+            case "Veg":
+                Console.WriteLine("You have selected veg");
+                break;
+            case "Non Veg":
+                Console.WriteLine("You have selected Non-veg");
+                break;
+                
+            case "desert":
+                Console.WriteLine("What desert are you interested in ?");
+                string desertmenu= Console.ReadLine();
+                switch(desertmenu)
+                {
+                    case "cake":
+                    Console.WriteLine("You have choosed Cake");
+                    break;
+                    
+                    case "Chocolate":
+                    Console.WriteLine("You have choosed Chocolate");
+                    break;
+                    
+                    case "Sweets":
+                    Console.WriteLine("You have choosed sweets");
+                    break;
+                }
+                break;
+            default:
+                Console.WriteLine("You have selected invalid option");
+                break;
+        }
+        Console.WriteLine("Thank U");
+    }
+}
