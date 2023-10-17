@@ -1,0 +1,61 @@
+//value--stack
+//reference--heap
+
+//value
+// using System;
+// struct Employee
+// {
+//     public int roll;
+//     public int id;
+// }
+// class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//       Employee e= new Employee();
+//       e.roll=27;
+//       e.id=193027;
+       
+//       Employee e1=e;
+//       Employee e2=e;
+       
+//       e.roll=47;
+//       Console.WriteLine(e.roll);
+//       Console.WriteLine(e1.roll);
+//       Console.WriteLine(e2.roll);
+//     }
+// }
+//op
+//47
+//27
+//27
+
+
+//heap
+using System;
+class Employee
+{
+    public int roll;
+    public int id;
+}
+class Program
+{
+    public static void Main(string[] args)
+    {
+       Employee e= new Employee();
+       e.roll=27;
+       e.id=193027;
+       
+       Employee e1=e;
+       Employee e2=e;
+       
+       e.roll=47;
+       Console.WriteLine(e.roll);
+       Console.WriteLine(e1.roll);
+       Console.WriteLine(e2.roll);
+    }
+}
+//op
+//47
+//47
+//47
