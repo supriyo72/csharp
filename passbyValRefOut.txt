@@ -1,0 +1,64 @@
+//pass by value
+// using System;
+// class Program
+// {
+//     public static void PassByValue(int a)
+//     {
+//         a+=10;
+//         Console.WriteLine("value is: "+a);
+//     }
+//     public static void Main(string[] args)
+//     {
+//         int value=45;
+        
+//         Program.PassByValue(value);
+//         Console.WriteLine(value);
+//         Console.ReadLine();
+//     }
+// }
+//op
+// value is: 55
+// 45
+//pass by ref
+// using System;
+// class Program
+// {
+//     public static void PassByRef(ref int a)
+//     {
+//         a+=10;
+//         Console.WriteLine("value is: "+a);
+//     }
+//     public static void Main(string[] args)
+//     {
+//         int value=45;
+        
+//         Program.PassByRef(ref value);
+//         Console.WriteLine(value);
+//         Console.ReadLine();
+//     }
+// }
+//op
+// value is: 55
+// 55
+
+//pass by out
+using System;
+class Program
+{
+    public static void PassByOut(out int a)
+    {
+        a=100;
+        Console.WriteLine("value is: "+a);
+    }
+    public static void Main(string[] args)
+    {
+        int value;
+        
+        Program.PassByOut(out value);
+        Console.WriteLine(value);
+        Console.ReadLine();
+    }
+}
+// op
+// value is: 100
+// 100
