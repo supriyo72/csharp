@@ -1,0 +1,41 @@
+using System;
+
+class Employee
+{
+    string name;
+    int id;
+    int roll;
+    double salary;
+    
+    public void setDetails(string name,int id,int roll,double salary)
+    {
+        this.name=name;
+        this.id=id;
+        this.roll=roll;
+        this.salary=salary;
+    }
+    public void getDetails()
+    {
+        Console.WriteLine($"Name: {name}, Roll:{roll},id:{id},salary:{salary}");
+    }
+    public static void Main(string[] args)
+    {
+        Employee obj = new Employee();
+        Employee obj1 = new Employee();
+        Employee obj2 = new Employee();
+        
+        //you can also take input from user to set the details
+        obj.setDetails("Supriyo",534,23,45000);
+        obj1.setDetails("Kalpesh",334,54,23556);
+        obj2.setDetails("Sachin",542,64,22454);
+          
+        obj.getDetails();
+        obj1.getDetails();
+        obj2.getDetails();
+    }
+}
+
+//op
+// Name: Supriyo, Roll:23,id:534,salary:45000
+// Name: Kalpesh, Roll:54,id:334,salary:23556
+// Name: Sachin, Roll:64,id:542,salary:22454
