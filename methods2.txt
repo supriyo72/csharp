@@ -1,0 +1,14 @@
+using System;
+class Program
+{
+    
+    public static void roll(int roll1,string name1,int roll2, string name2)
+    {
+        Console.WriteLine($"{name1}:{roll1},{name2}:{roll2}");
+    }
+    public static void Main(string[] args)
+    {
+       Program.roll(45,"Adarsh",89,"Supriyo");
+       Program.roll(name1: "Kamlesh",roll1: 89,name2: "Sakshi",roll2: 65);
+    }
+}
