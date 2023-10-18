@@ -1,0 +1,42 @@
+//static constructor
+// A static constructor is used to initialize static variables of the class and to perform a particular action only once.
+// It is invoked before any static member of the class is accessed.
+// A static constructor does not take any parameters and does not use any access modifiers because it is invoked directly by the CLR instead of the object.
+// only one static constructor can be created in the class
+// it is called automatically before the first instance of the class created
+//we cannot call static constructor directly
+
+using System;
+class Student
+{
+    public static string name;
+    public static int id;
+    public double sal;
+    
+    public Student()
+    {
+        Console.WriteLine("Default constructor activated");
+    }
+    static Student()
+    {
+        name="Raj";
+        id=34;
+        Console.WriteLine("Static constructor activated "+name+" "+id);
+    }
+    public static void Details()
+    {
+        Console.WriteLine($"Name: {name}, ID: {id}");
+    }
+    
+}
+class Program
+{
+    
+    public static void Main(string[] args)
+    {
+        Student obj=new Student();
+        Student.Details();
+    }
+}
+ 
+ 
