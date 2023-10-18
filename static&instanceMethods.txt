@@ -1,0 +1,61 @@
+//static and instance method
+//static: saare obj ke liye voh variable same rahe
+//static var mn sirf static method hi use kr skhta hoon
+//instance var ke andar instance+static use kr skhta hoon
+
+using System;
+class Student
+{
+    public int age;
+    public char grade;
+    public int roll;
+    public string Fname;
+    public string Lname;
+    public static string SchoolName="St Francis";
+    // public static int sal=150000;
+    public static int fees=114000;
+    
+    public void StudDetails()
+    {
+        Console.WriteLine($"{age},{grade},{roll},{Fname}-{Lname}");
+        Console.WriteLine("School: "+SchoolName+" Fees: "+fees);
+    }
+    public static int getFees()
+    {
+        return fees;
+    }
+    public static int getsalaryincrement(int sal){
+        return sal/10;
+    }
+    
+}
+class Program
+{
+    
+    public static void Main(string[] args)
+    {
+        Student obj=new Student();
+        
+        obj.age=21;
+        obj.grade='B';
+        obj.roll=193027;
+        obj.Fname="Supriyo";
+        obj.Lname="Ghosh";
+        
+        
+        Student obj1=new Student();
+        obj1.age=35;
+        obj1.grade='A';
+        obj1.roll=25874;
+        obj1.Fname="Aman";
+        obj1.Lname="Yadav";
+        
+        obj.StudDetails();
+        obj1.StudDetails();
+        Console.WriteLine("School: "+Student.SchoolName);
+        Console.WriteLine("Fees: "+Student.getFees());
+        Console.WriteLine("salary increment: "+Student.getsalaryincrement(150000));
+    }
+}
+ 
+ 
