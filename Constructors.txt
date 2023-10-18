@@ -1,0 +1,103 @@
+//default-constructor
+// using System;
+// class Program
+// {
+//     public Program()
+//     {
+//         Console.WriteLine("Hello i am a constructor");
+//     }
+//     public static void Main(string[] args)
+//     {
+//         Program obj= new Program();
+//     }
+// }
+ 
+ 
+ 
+//parameterized
+
+// using System;
+// class Program
+// {
+//     public Program(int age,int roll,string name)
+//     {
+//         Console.WriteLine($"Name: {name},Roll:{roll},Age:{age}");
+//     }
+//     public static void Main(string[] args)
+//     {
+//         Program obj= new Program(45,193027,"Supriyo");
+//         Program obj1= new Program(25,58795,"Raman");
+//         Program obj2= new Program(35,8955,"Kalpesh");
+//     }
+// }
+
+
+//parameterized
+
+// using System;
+// class Program
+// {
+//     string name;
+//     int age;
+//     int roll;
+//     public Program(int age,int roll,string name)
+//     {
+//         this.name=name;
+//         this.roll=roll;
+//         this.age=age;
+//     }
+//     public string getName()
+//     {
+//         return name;
+//     }
+//     public int getAge()
+//     {
+//         return age;
+//     }
+//     public int getRoll()
+//     {
+//         return roll;
+//     }
+    
+//     public static void Main(string[] args)
+//     {
+//         Program obj= new Program(45,193027,"Supriyo");
+//         Program obj1= new Program(25,58795,"Raman");
+//         Program obj2= new Program(35,8955,"Kalpesh");
+//         Program obj3= new Program(23,2342,"Shiny");
+        
+//         Console.WriteLine($"Name: {obj.getName()},Roll: {obj.getRoll()}, Age: {obj.getAge()}");
+//         Console.WriteLine($"Name: {obj1.getName()},Roll: {obj1.getRoll()}, Age: {obj1.getAge()}");
+//         Console.WriteLine($"Name: {obj2.getName()},Roll: {obj2.getRoll()}, Age: {obj2.getAge()}");
+//         Console.WriteLine($"Name: {obj3.getName()},Roll: {obj3.getRoll()}, Age: {obj3.getAge()}");
+        
+//     }
+// }
+
+
+//Constructor overloading
+
+using System;
+class Program
+{
+    public Program(int age)
+    {
+        Console.WriteLine($"Age:{age}");
+    }
+    public Program(int age,string name)
+    {
+        Console.WriteLine($"Name: {name},Age:{age}");
+    }
+    public Program(int age,string name,int roll)
+    {
+        Console.WriteLine($"Name: {name},Age:{age},Roll:{roll}");
+    }
+    
+    public static void Main(string[] args)
+    {
+        Program obj= new Program(45);
+        Program obj1= new Program(36,"Supriyo");
+        Program obj2= new Program(25,"Raman",193207);
+        
+    }
+}
