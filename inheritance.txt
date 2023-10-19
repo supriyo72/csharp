@@ -1,0 +1,42 @@
+//inheritance
+using System;
+class Company
+{
+    public string Comploc;
+    public int CompRegId;
+    public string CompanyName;
+    
+    public void DisplDetails(string Comploc,int CompRegId,string CompanyName)
+    {
+        Console.WriteLine($"Company location: {Comploc}, Reg-id: {CompRegId}, Company-Name: {CompanyName}");
+    }
+}
+class Employee : Company
+{
+    public int EmpCode;
+}
+class Staffs : Employee
+{
+    public int StaffCode;
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Company obj=new Company();
+        obj.DisplDetails("Chennai",2478,"Infosys");
+        
+        
+        Employee obj1= new Employee();
+        obj1.Comploc= "Mumbai";
+        obj1.CompRegId= 45787;
+        obj1.CompanyName= "LTIMindtree";
+        obj1.DisplDetails(obj1.Comploc,obj1.CompRegId,obj1.CompanyName);
+        
+        Staffs obj2= new Staffs();
+        obj2.Comploc= "Delhi";
+        obj2.CompRegId= 58465;
+        obj2.CompanyName= "TCS";
+        obj2.DisplDetails(obj2.Comploc,obj2.CompRegId,obj2.CompanyName);
+    }
+}
