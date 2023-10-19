@@ -14,6 +14,14 @@ using System;
 
         }
 
+
+        //ERROR
+        // public Example()
+        // {
+        //     Console.WriteLine("HII");
+        // }
+
+
         public Example(string fname,string lname)
         {
             Console.WriteLine($"My full name is {fname} {lname}");
@@ -42,7 +50,11 @@ using System;
         static void Main(string[] args)
         {
             Example e = new Example("Ali","Khan");
+
+
             // Example e1 = new Example();  -->error
+
+
             Example.getTime();
             Example.a = 20;
             Console.WriteLine(Example.getIncrement());
