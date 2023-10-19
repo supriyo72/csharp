@@ -1,0 +1,102 @@
+//single inheritance
+// using System;
+// class Base
+// {
+//   public void show()
+//   {
+//       Console.WriteLine("i am base class");
+//   }
+// }
+// class Derived1 : Base
+// {
+//   public void show1()
+//   {
+//       Console.WriteLine("i am Derived1 class");
+//   }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         Derived1 obj1= new Derived1();
+//         obj1.show1();
+//         obj1.show();
+//     }
+// }
+
+
+
+// using System;
+// class Base
+// {
+//   public void show()
+//   {
+//       Console.WriteLine("i am base class");
+//   }
+// }
+// class Derived1 : Base
+// {
+//   public void show1()
+//   {
+//       Console.WriteLine("i am Derived1 class");
+//   }
+// }
+// class Derived2 : Base
+// {
+//   public void show2()
+//   {
+//       Console.WriteLine("i am Derived2 class");
+//   }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         Derived1 obj1= new Derived1();
+//         obj1.show1();
+//         obj1.show();
+        
+//         Derived2 obj2= new Derived2();
+//         obj2.show2();
+//         obj2.show();
+//     }
+// }
+
+
+
+using System;
+class Base
+{
+   public void show()
+   {
+       Console.WriteLine("i am base class");
+   }
+}
+class Derived1 : Base
+{
+   public void show1()
+   {
+       Console.WriteLine("i am Derived1 class");
+   }
+}
+class Derived2 : Derived1
+{
+   public void show2()
+   {
+       Console.WriteLine("i am Derived2 class");
+   }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Derived1 obj1= new Derived1();
+        obj1.show1();
+        obj1.show();
+        
+        Derived2 obj2= new Derived2();
+        obj2.show2();
+        obj2.show();
+        obj2.show1();
+    }
+}
