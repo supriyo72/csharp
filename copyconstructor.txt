@@ -1,0 +1,32 @@
+using System;
+
+public class Program
+{
+    string name;
+    int roll;
+    
+    public Program(string name,int roll)
+    {
+        this.name=name;
+        this.roll=roll;
+    }
+    //copy constructor
+    public Program(Program p)
+    {
+        this.name= p.name;
+        this.roll=p.roll;
+    }
+    public void Details()
+    {
+        Console.WriteLine($"Name: {name},Roll:{roll}");
+    }
+    public static void Main(string[] args)
+    {
+        Program obj=new Program("Supriyo",193027);
+        obj.Details();
+        //copy
+        Program obj1= new Program(obj);
+        obj1.Details();
+        
+    }
+}
