@@ -1,0 +1,66 @@
+//solution for null or empty name and negative age using encapsulation
+using System;
+
+class Employee
+{
+    private int age;
+    private string name;
+    
+    public void setName(string name)
+    {
+        if(string.IsNullOrEmpty(name)==true)
+        {
+            Console.WriteLine("Correct your name");
+        }
+        else
+        {
+            this.name=name;
+        }
+    }
+    public void setAge(int age)
+    {
+        if(age>0)
+        {
+            this.age=age;
+        }
+        else
+        {
+            Console.WriteLine("Correct your Age");
+        }
+    }
+    public void getName()
+    {
+        if(string.IsNullOrEmpty(this.name)==true)
+        {
+            
+        }
+        else
+        {
+            Console.WriteLine("Your name is: "+this.name);
+        }
+    }
+    public void getAge()
+    {
+        if(age>0)
+        {
+            Console.WriteLine("Your Age is: "+this.age);
+        }
+        else
+        {
+            
+        }
+        
+    }
+    
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Employee obj=new Employee();
+        obj.setName("");
+        obj.setAge(-45);
+        obj.getName();
+        obj.getAge();
+    }
+}
