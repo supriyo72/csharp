@@ -1,0 +1,50 @@
+// using System;
+// class Company
+// {
+//     public Company()
+//     {
+//         Console.WriteLine("Company: tcs");
+//     }
+// }
+// class Emp : Company
+// {
+//     public Emp()
+//     {
+//         Console.WriteLine("Employee: supu");
+//     }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         Emp obj = new Emp();
+//     }
+// }
+//op
+//Company: tcs
+// Employee: supu
+
+
+
+using System;
+class Company
+{
+    public Company(string message,int roll)
+    {
+        Console.WriteLine(message+" "+roll);
+    }
+}
+class Emp : Company
+{
+    public Emp():base("Hii bache logh",193027)
+    {
+        Console.WriteLine("Employee: supu");
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Emp obj = new Emp();
+    }
+}
