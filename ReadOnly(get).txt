@@ -1,0 +1,24 @@
+//Read Property
+using System;
+class Student
+{
+    private int marks=75;
+    
+    public int Marks
+    {
+        get 
+        {
+            return this.marks;
+        }
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Student obj = new Student();
+        
+        Console.WriteLine(obj.Marks);
+        
+    }
+}
