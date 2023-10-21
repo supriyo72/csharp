@@ -1,0 +1,42 @@
+using System;
+
+class Student
+{
+    private int age;
+    private string name;
+    
+    public int Age
+    {
+        set
+        {
+            this.age= value;
+        }
+        get 
+        {
+            return this.age;
+        }
+    }
+    public string Name
+    {
+        set
+        {
+            this.name= value;
+        }
+        get 
+        {
+            return this.name;
+        }
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Student obj = new Student();
+        obj.Age=21;
+        Console.WriteLine(obj.Age);
+        obj.Name="Supriyo";
+        Console.WriteLine(obj.Name);
+        
+    }
+}
