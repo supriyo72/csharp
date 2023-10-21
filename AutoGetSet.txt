@@ -1,0 +1,76 @@
+//Automatically get-set
+// using System;
+// class Student
+// {
+//     public string firstname {get; set;}
+//     public string lastname{get; set;}
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         Student obj= new Student();
+//         obj.firstname="Supu";
+//         obj.lastname="ghosh";
+        
+//         Console.WriteLine(obj.firstname+" "+obj.lastname);
+//     }
+// }
+
+
+
+
+
+// using System;
+// class Student
+// {
+//     public string firstname {get; set;}
+//     public string lastname{get; set;}
+    
+//     public Student(string fname,string lname)
+//     {
+//         firstname=fname;
+//         lastname=lname;
+//     }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         Student obj= new Student("Kalpesh","mali");
+//         obj.firstname="Supu";
+//         obj.lastname="ghosh";
+        
+//         Console.WriteLine(obj.firstname+" "+obj.lastname);
+//     }
+// }
+//op
+//Supu ghosh
+
+
+
+using System;
+class Student
+{
+    public string firstname {get; private set;}
+    public string lastname{get; private set;}
+    
+    public Student(string fname,string lname)
+    {
+        firstname=fname;
+        lastname=lname;
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Student obj= new Student("Kalpesh","mali");
+        // obj.firstname="Supu";
+        // obj.lastname="ghosh";
+        
+        Console.WriteLine(obj.firstname+" "+obj.lastname);
+    }
+}
+//op
+// Kalpesh mali
