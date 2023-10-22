@@ -1,0 +1,62 @@
+using System;
+//this keyword is not valid in static
+// class University
+// {
+//     private static string UniversityName;
+    
+//     public static string _UniversityName
+//     {
+//         set
+//         {
+//             UniversityName= value;
+//         }
+//         get
+//         {
+//             return UniversityName;
+//         }
+//     }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         University._UniversityName="SFIT";
+//         Console.WriteLine(University._UniversityName);
+//     }
+// }
+
+
+
+class University
+{
+    private static string UniversityName;
+    
+    public static string _UniversityName
+    {
+        set
+        {
+            if(string.IsNullOrEmpty(value)==true)
+            {
+                Console.WriteLine("Write Valid name!..");
+            }
+            else
+            {
+                UniversityName= value;
+            }
+            
+        }
+        get
+        {
+            return UniversityName;
+        }
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        University._UniversityName=null;
+        Console.WriteLine(University._UniversityName);
+    }
+}
+
