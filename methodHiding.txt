@@ -1,0 +1,224 @@
+// //method hiding
+// using System;
+
+// class Employee
+// {
+//     public void show()
+//     {
+//         Console.WriteLine ("I am parent class");
+//     }
+// }
+// class Staff: Employee
+// {
+//     public void show()
+//     {
+//         Console.WriteLine ("I am child class");
+//     }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         Staff obj = new Staff();
+//         obj.show();
+//         //op I am child class
+//     }
+// }
+
+
+
+
+//method hiding
+//no changes if we use new keyword..it is used just to pretend that we are hiding the method.
+// using System;
+
+// class Employee
+// {
+//     public void show()
+//     {
+//         Console.WriteLine ("I am parent class");
+//     }
+// }
+// class Staff: Employee
+// {
+//     public new void show()
+//     {
+//         base.show();
+//         Console.WriteLine ("I am child class");
+//     }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         Staff obj = new Staff();
+//         obj.show();
+//     }
+// }
+//op
+// I am parent class
+// I am child class
+
+
+
+
+// using System;
+
+// class Employee
+// {
+//     public void show()
+//     {
+//         Console.WriteLine ("I am parent class");
+//     }
+// }
+// class Staff: Employee
+// {
+//     public new void show()
+//     {
+//         Console.WriteLine ("I am child class");
+//     }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         Staff obj = new Staff();
+//         ((Employee)obj).show();
+//     }
+// }
+//op
+// I am parent class
+
+
+
+// using System;
+
+// class Company
+// {
+//     public string fname;
+//     public string lname;
+    
+//     public void Display()
+//     {
+//         Console.WriteLine(fname+" "+lname);
+//     }
+// }
+// class Employee: Company
+// {
+//     public void Display()
+//     {
+//         Console.WriteLine(fname+" "+lname+" "+" LTIMindtree");
+//     }
+// }
+// class Branch: Company
+// {
+//     public void Display()
+//     {
+//         Console.WriteLine(fname+" "+lname+" Mumbai");
+//     }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         Branch obj = new Branch();
+//         obj.fname= "Raj";
+//         obj.lname="das";
+        
+//         obj.Display();
+//     }
+// }
+//op
+//Raj das Mumbai
+
+
+
+// using System;
+
+// class Company
+// {
+//     public string fname;
+//     public string lname;
+    
+//     public void Display()
+//     {
+//         Console.WriteLine(fname+" "+lname);
+//     }
+// }
+// class Employee: Company
+// {
+//     public new void Display()
+//     {
+//         Console.WriteLine(fname+" "+lname+" "+" LTIMindtree");
+//     }
+// }
+// class Branch: Company
+// {
+//     public new void Display()
+//     {
+//         base.Display();
+//         Console.WriteLine(fname+" "+lname+" Mumbai");
+//     }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         Branch obj = new Branch();
+//         obj.fname= "Raj";
+//         obj.lname="das";
+        
+//         obj.Display();
+//     }
+// }
+//op
+// Raj das
+// Raj das Mumbai
+
+
+
+using System;
+
+class Company
+{
+    public string fname;
+    public string lname;
+    
+    public void Display()
+    {
+        Console.WriteLine(fname+" "+lname);
+    }
+}
+class Employee: Company
+{
+    public new void Display()
+    {
+        Console.WriteLine(fname+" "+lname+" "+" LTIMindtree");
+    }
+}
+class Branch: Company
+{
+    public new void Display()
+    {
+        base.Display();
+        Console.WriteLine(fname+" "+lname+" Mumbai");
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Employee obj = new Employee();
+        obj.fname= "Manan";
+        obj.lname="jain";
+        obj.Display();
+        
+        Company obj1 = new Employee();
+        obj1.fname= "deepak";
+        obj1.lname="rathore";
+        obj1.Display();
+    }
+}
+//op
+// Manan jain  LTIMindtree
+// deepak rathore
