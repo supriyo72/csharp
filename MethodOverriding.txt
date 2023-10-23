@@ -1,0 +1,26 @@
+using System;
+class Employee
+{
+    public virtual void show()
+    {
+        Console.WriteLine ("I am parent class");
+    }
+}
+class Staff: Employee
+{
+    public override void show()
+    {
+        Console.WriteLine ("I am child class");
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Employee obj = new Staff();
+        obj.show();
+        
+    }
+}
+//op I am child class
+//here my o/p should be I am parent class but the methods of my parent class is virtual which means child class method will override the method of parent class...also u have to write override in child class
