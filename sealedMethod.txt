@@ -1,0 +1,34 @@
+using System; 
+class ITSystem 
+{ 
+    
+public virtual void Print() 
+{ 
+    Console.WriteLine("The system should be handled carefully"); 	
+} 
+
+}
+class CompanySystem : ITSystem 
+{ 
+public override sealed void Print() 
+{ 
+    
+  Console.WriteLine("The system information is confidential"); 
+  Console.WriteLine ("This information should not be overridden"); 
+  
+} 
+}
+class SealedSystem : CompanySystem 
+{ 
+public override void Print() 
+{ 
+ Console.WriteLine("This statement wont get executed"); 
+} 
+static void Main (string [] args) 
+{ 
+ SealedSystem objSealed = new SealedSystem(); 
+ objSealed.Print(); 
+} 
+}
+
+// o/p    'SealedSystem.Print()': cannot override inherited member 'CompanySystem.Print()' because it is sealed
