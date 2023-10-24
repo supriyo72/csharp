@@ -1,0 +1,69 @@
+// Sealed classes are restricted classes that cannot be inherited where the list depicts the conditions in which a class can be marked as sealed:
+// If overriding the methods of a class might result in unexpected functioning of the class.
+// When you want to prevent any third party from modifying your class.
+
+
+
+// using System;
+
+//     class ParentClass
+//     {
+//         public void Show1()
+//         {
+//             Console.WriteLine("This is the method of parent class !!");
+//         }
+//     }
+
+//     class ChildClass : ParentClass
+//     {
+//         public void Show2()
+//         {
+//             Console.WriteLine("This is the method of child class !!");
+//         }
+//     }
+
+//     class Program
+//     {
+//         static void Main(string[] args)
+//         {
+//             ChildClass obj = new ChildClass();
+//             obj.Show1();
+//             //op This is the method of parent class !!
+            
+//         }
+//     }
+    
+    
+    
+    
+    
+using System;
+
+    sealed class ParentClass
+    {
+        public void Show1()
+        {
+            Console.WriteLine("This is the method of parent class !!");
+        }
+    }
+
+    class ChildClass : ParentClass
+    {
+        public void Show2()
+        {
+            Console.WriteLine("This is the method of child class !!");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ChildClass obj = new ChildClass();
+            obj.Show1();
+            //op Compile time error
+            
+        }
+    }
+
+
