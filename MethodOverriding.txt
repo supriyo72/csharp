@@ -1,3 +1,4 @@
+//cannot override inherited member if the parent class is not marked virtual, abstract, or override
 using System;
 class Employee
 {
