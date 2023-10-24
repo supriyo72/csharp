@@ -1,0 +1,133 @@
+//DELEGATES
+// using System;
+
+// public delegate void Calculation(int a,int b);
+// public class Program
+// {
+//     public static void Addition(int a,int b)
+//     {
+//         int res= a+b;
+//         Console.WriteLine($"Addition is {res}");
+//     }
+//     public static void Main(string[] args)
+//     {
+//         Calculation obj=new Calculation(Program.Addition);
+//         obj.Invoke(10,20);
+//         obj(10,20);  //Can also use this instead of Invoke
+//     }
+// }
+//op
+//Addition is 30
+
+
+
+
+
+// using System;
+
+// public delegate void Calculation(int a,int b);
+// public class Program
+// {
+//     public static void Addition(int a,int b)
+//     {
+//         int res= a+b;
+//         Console.WriteLine($"Addition is {res}");
+//     }
+//     public static void Subt(int a,int b)
+//     {
+//         int res= a-b;
+//         Console.WriteLine($"Subtraction is {res}");
+//     }
+//     public static void Mul(int a,int b)
+//     {
+//         int res= a*b;
+//         Console.WriteLine($"Multiplication is {res}");
+//     }
+//     public static void Div(int a,int b)
+//     {
+//         int res= a/b;
+//         Console.WriteLine($"Division is {res}");
+//     }
+//     public static void Main(string[] args)
+//     {
+//         Calculation obj=new Calculation(Program.Addition);
+//         obj(10,20);
+//         obj=Subt;
+//         obj(30,4);
+//         obj=Mul;
+//         obj(20,20);
+//         obj=Div;
+//         obj(65,5);
+//     }
+// }
+//op
+// Addition is 30
+// Subtraction is 26
+// Multiplication is 400
+// Division is 13
+
+
+
+// using System;
+
+// public delegate void Calculation(int a,int b);
+// public class Program
+// {
+//     public static void Addition(int a,int b)
+//     {
+//         int res= a+b;
+//         Console.WriteLine($"Addition is {res}");
+//     }
+//     public static void Subt(int a,int b)
+//     {
+//         int res= a-b;
+//         Console.WriteLine($"Subtraction is {res}");
+//     }
+//     public static void Mul(int a,int b)
+//     {
+//         int res= a*b;
+//         Console.WriteLine($"Multiplication is {res}");
+//     }
+//     public static void Div(int a,int b)
+//     {
+//         int res= a/b;
+//         Console.WriteLine($"Division is {res}");
+//     }
+//     public static void Main(string[] args)
+//     {
+//         Calculation obj=new Calculation(Program.Addition);
+//         obj(10,20);
+//         Calculation obj1=new Calculation(Program.Subt);
+//         obj1(30,4);
+//         Calculation obj2=new Calculation(Program.Mul);
+//         obj2(20,20);
+//         Calculation obj3=new Calculation(Program.Div);
+//         obj3(65,5);
+//     }
+// }
+//op
+// Addition is 30
+// Subtraction is 26
+// Multiplication is 400
+// Division is 13
+
+
+
+
+using System;
+
+public delegate void Calculation(int a,int b);
+public class Program
+{
+    public static void Addition(int a,int b)
+    {
+        int res= a+b;
+        Console.WriteLine($"Addition is {res}");
+    }
+    public static void Main(string[] args)
+    {
+        //Single delegates
+        Calculation obj=new Calculation(Addition);
+        obj(10,20);
+    }
+}
