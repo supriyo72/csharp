@@ -1,0 +1,166 @@
+// using System;
+//     class A
+//     {
+//         public virtual void Print()
+//         {
+//             Console.WriteLine("This is a method of Class A !!");
+//         }
+//     }
+
+//     class B : A
+//     {
+//         public void Print()
+//         {
+//             Console.WriteLine("This is a method of Class B !!");
+//         }
+//     }
+//     class C : B
+//     {
+//         public void Print()
+//         {
+//             Console.WriteLine("This is a method of Class C !!");
+//         }
+//     }
+
+//     class Program
+//     {
+//         static void Main(string[] args)
+//         {
+//             A obj1 = new B();
+//             obj1.Print();
+//             //op This is a method of Class A !!
+
+//             A obj3 = new C();
+//             obj3.Print();
+//             //op This is a method of Class A !!
+            
+//             B obj2 = new B();
+//             obj2.Print();
+//             //op This is a method of Class B !!
+            
+//             B obj = new C();
+//             obj.Print();
+//             //op This is a method of Class B !!
+//             Console.ReadLine();
+
+//         }
+//     }
+
+
+
+
+
+
+
+using System;
+    class A
+    {
+        public virtual void Print()
+        {
+            Console.WriteLine("This is a method of Class A !!");
+        }
+    }
+    class Z : A
+    {
+        public void Print()
+        {
+            Console.WriteLine("This is a method of Class Z !!");
+        }
+    }
+
+    class B : Z
+    {
+        public void Print()
+        {
+            Console.WriteLine("This is a method of Class B !!");
+        }
+    }
+    class C : B
+    {
+        public void Print()
+        {
+            Console.WriteLine("This is a method of Class C !!");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            A obj1 = new B();
+            obj1.Print();
+            //op This is a method of Class A !!
+
+            A obj3 = new C();
+            obj3.Print();
+            //op This is a method of Class A !!
+            
+            B obj2 = new B();
+            obj2.Print();
+            //op This is a method of Class B !!
+            
+            B obj = new C();
+            obj.Print();
+            //op This is a method of Class B !!
+            Console.ReadLine();
+
+        }
+    }
+
+
+
+
+using System;
+    class A
+    {
+        public virtual void Print()
+        {
+            Console.WriteLine("This is a method of Class A !!");
+        }
+    }
+    class Z : A
+    {
+        public override void Print()
+        {
+            Console.WriteLine("This is a method of Class Z !!");
+        }
+    }
+
+    class B : Z
+    {
+        public override void Print()
+        {
+            Console.WriteLine("This is a method of Class B !!");
+        }
+    }
+    class C : B
+    {
+        public override void Print()
+        {
+            Console.WriteLine("This is a method of Class C !!");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            A obj1 = new B();
+            obj1.Print();
+            //op This is a method of Class B !!
+
+            A obj3 = new C();
+            obj3.Print();
+            //op This is a method of Class C !!
+            
+            B obj2 = new B();
+            obj2.Print();
+            //op This is a method of Class B !!
+            
+            B obj = new C();
+            obj.Print();
+            //op This is a method of Class C !!
+            Console.ReadLine();
+
+        }
+    }
