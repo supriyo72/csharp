@@ -1,0 +1,55 @@
+using System;
+//Multiple delegates
+public delegate void Calculation1();
+public delegate void Calculation2(int a,int b);
+public delegate void Calculation3(int a,int b,int c);
+public delegate void Calculation4(int a);
+
+public class Program
+{
+    public static void hello()
+    {
+        Console.WriteLine ("Hello Ladies and gentleman");
+    }
+
+    public static void Square(int a)
+    {
+        int res= a*a;
+        Console.WriteLine($"Square of {a} is {res}");
+    }
+
+    public static void Div(int a,int b)
+    {
+        int res= a/b;
+        Console.WriteLine($"Division is {res}");
+    }
+    public static void Mul(int a,int b)
+    {
+        int res= a*b;
+        Console.WriteLine($"Multiplication is {res}");
+    }
+    
+    public static void lbh(int l,int b,int h)
+    {
+        int res= l*b*h;
+        Console.WriteLine($"L*B*H is {res}");
+    }
+    
+    public static void Main(string[] args)
+    {
+        Calculation1 obj=new Calculation1(hello);
+        obj();
+        
+        Calculation2 obj1=new Calculation2(Div);
+        obj1(24,4);
+        
+        obj1=Mul;
+        obj1(6,5);
+        
+        Calculation3 obj3=new Calculation3(Program.lbh);
+        obj3.Invoke(20,20,20);
+        
+        Calculation4 obj4=new Calculation4(Square);
+        obj4(5);
+    }
+}
