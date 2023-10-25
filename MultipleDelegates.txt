@@ -53,3 +53,10 @@ public class Program
         obj4(5);
     }
 }
+//op
+// Hello Ladies and gentleman
+// Division is 6
+// Multiplication is 30
+// L*B*H is 8000
+// Square of 5 is 25
+
