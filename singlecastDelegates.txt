@@ -1,0 +1,35 @@
+using System;
+
+//single cast delegates
+public delegate void Display();
+public class Program
+{
+    public static void hello()
+    {
+        Console.WriteLine ("Hello Ladies and gentleman");
+    }
+    public static void hii()
+    {
+        Console.WriteLine ("Hii Ladies and gentleman");
+    }
+    public static void Kemon()
+    {
+        Console.WriteLine ("Kemon aacho sobhai");
+    }
+    public static void Main(string[] args)
+    {
+        //method-1
+        Display obj=new Display(hello);
+        obj.Invoke();
+        //method-2
+        Display obj1=new Display(Program.hii);
+        obj1();
+        //method-3
+        obj1=Kemon;
+        obj1();
+    }
+}
+//op
+// Hello Ladies and gentleman
+// Hii Ladies and gentleman
+// Kemon aacho sobhai
