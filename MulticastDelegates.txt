@@ -1,0 +1,39 @@
+using System;
+//MULTI-CAST Delegates
+public delegate void Calculation(int a,int b);
+public class Program
+{
+    public static void Addition(int a,int b)
+    {
+        int res= a+b;
+        Console.WriteLine($"Addition is {res}");
+    }
+    public static void Subt(int a,int b)
+    {
+        int res= a-b;
+        Console.WriteLine($"Subtraction is {res}");
+    }
+    public static void Mul(int a,int b)
+    {
+        int res= a*b;
+        Console.WriteLine($"Multiplication is {res}");
+    }
+    public static void Div(int a,int b)
+    {
+        int res= a/b;
+        Console.WriteLine($"Division is {res}");
+    }
+    public static void Main(string[] args)
+    {
+        Calculation obj=new Calculation(Program.Addition);
+        obj+= Subt;
+        obj+= Mul;
+        obj-= Div;
+        obj(150,100);
+        
+    }
+}
+//op
+// Addition is 250
+// Subtraction is 50
+// Multiplication is 15000
