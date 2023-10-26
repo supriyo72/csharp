@@ -5,6 +5,19 @@ abstract class Person
     public string lname;
     public string phoneNo;
     public int age;
+    public string location;
+    
+    public string address
+    {
+        set
+        {
+            this.location=value;
+        }
+        get
+        {
+            return this.location;
+        }
+    }
     
     public static string College="SFIT";
     public abstract void showDetails();
@@ -52,7 +65,9 @@ public class Program
         obj1.age=21;
         obj1.roll=9027;
         obj1.fees=114000;
+        obj1.location="Mumbai";
         
+        Console.WriteLine($"Student lives in: {obj1.location}");
         obj1.showDetails();
         
         Console.WriteLine("...........................");
@@ -65,19 +80,23 @@ public class Program
         obj2.tid=6545;
         obj2.qualification="B.COM";
         
+        obj2.location="Thane";
+        
+        Console.WriteLine($"Teacher lives in: {obj2.location}");
         obj2.showDetails();
         Console.WriteLine("College Name: "+Person.College);
         
     }
 }
-
 //op
+// Student lives in: Mumbai
 // Name of student: Rahul Maurya
 // Phone-no of student: 7208477410
 // Age of student: 21
 // Roll-no of student: 9027
 // Fees of student: 114000
 // ...........................
+// Teacher lives in: Thane
 // Name of Teacher: Surekha singh
 // Phone-no of Teacher: 9939454320
 // Age of Teacher: 41
