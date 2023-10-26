@@ -1,0 +1,48 @@
+using System;
+
+class Customer
+{
+    public int CustId;
+    public string CustName;
+    public double GrossPay;
+    double netSalary;
+    double Discount=0.2;
+
+    public Customer(int custId,string custName, double grossPay)
+    {
+        this.CustId= custId;
+        this.CustName= custName;
+        this.GrossPay=grossPay;
+    }
+    private void Salary()
+    {
+        if(GrossPay>=30000)
+        {
+            netSalary= GrossPay-(GrossPay*Discount);
+            Console.WriteLine($"Your amount after discount is: {netSalary}");
+        }
+        else
+        {
+            Console.WriteLine($"Your amount is: {GrossPay}");
+        }
+    }
+    public void Details()
+    {
+        Console.WriteLine($"Name of an employee: {CustName}");
+        Console.WriteLine($"Id of an employee: {CustId}");
+        this.Salary();
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Customer obj = new Customer(193027,"Supriyo",54214);
+        obj.Details();
+    }
+}
+
+//op
+//Name of an employee: Supriyo
+//Id of an employee: 193027
+//Your amount after discount is: 43371.2
