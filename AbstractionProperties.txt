@@ -1,0 +1,47 @@
+using System;
+abstract class Person
+{
+    public abstract int roll {get; set;}
+    public abstract int age {get; set;}
+    
+}
+class Student : Person
+{
+    private int Roll;
+    private int Age;
+    
+    public override int roll
+    {
+        set
+        {
+            this.Roll= value;
+        }
+        get
+        {
+            return this.Roll;
+        }
+    }
+    public override int age
+    {
+        set
+        {
+            this.Age= value;
+        }
+        get
+        {
+            return this.Age;
+        }
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    { 
+        Student obj=new Student();
+        obj.roll=4857;
+        obj.age=21;
+        
+        Console.WriteLine($"Roll: {obj.roll}");
+        Console.WriteLine($"Age: {obj.age}");
+    }
+}
