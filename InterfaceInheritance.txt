@@ -1,0 +1,83 @@
+using System;
+//Interface-Inheritance
+interface i1
+{
+    void print1();
+}
+interface i2
+{
+    void print2();
+}
+interface i3: i1,i2
+{
+    void print3();
+}
+class interfaceMethod1 : i3
+{
+    public void Random1()
+    {
+        Console.WriteLine("I am random1");
+    }
+    public void print1()
+    {
+        Console.WriteLine("I am print-1");
+    }
+    public void print2()
+    {
+        Console.WriteLine("I am print-2");
+    }
+    public void print3()
+    {
+        Console.WriteLine("I am print-3");
+    }
+}
+class interfaceMethod2 : i2
+{
+    public void Random2()
+    {
+        Console.WriteLine("I am random2");
+    }
+    public void print2()
+    {
+        Console.WriteLine("I am print-2");
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        interfaceMethod2 obj2=new interfaceMethod2();
+        obj2.Random2();
+        obj2.print2();
+        
+        interfaceMethod1 obj1=new interfaceMethod1();
+        obj1.Random1();
+        obj1.print1();
+        obj1.print2();
+        obj1.print3();
+        
+        i3 myInterface= new interfaceMethod1();
+        myInterface.print1();
+        myInterface.print2();
+        myInterface.print3();
+        // myInterface.Random1();  -->error
+        
+        i2 myInterface1= new interfaceMethod2();
+        myInterface1.print2();
+        // myInterface1.Random2();    --->error
+        
+        
+        
+    }
+}
+//op
+// I am random2
+// I am print-2
+// I am random1
+// I am print-1
+// I am print-2
+// I am print-3
+// I am print-1
+// I am print-2
+// I am print-3
+// I am print-2
