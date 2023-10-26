@@ -1,0 +1,44 @@
+using System;
+
+interface Animal
+{
+    //Bydefault-Public+Abstract
+    void AnimalSound();
+}
+class Dog : Animal
+{
+    public void AnimalSound()
+    {
+        Console.WriteLine("Dog barks");
+    }
+}
+class lion : Animal
+{
+    public void AnimalSound()
+    {
+        Console.WriteLine("Lion Roars");
+    }
+}
+class Tiger : Animal
+{
+    public void AnimalSound()
+    {
+        Console.WriteLine("Tiger grrrr");
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Dog obj1= new Dog();
+        obj1.AnimalSound();
+        lion obj2= new lion();
+        obj2.AnimalSound();
+        Tiger obj3= new Tiger();
+        obj3.AnimalSound();
+    }
+}
+//op
+// Dog barks
+// Lion Roars
+// Tiger grrrr
