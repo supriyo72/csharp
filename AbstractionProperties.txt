@@ -1,3 +1,54 @@
+// using System;
+// abstract class Person
+// {
+//     public int Roll;
+//     public int Age;
+    
+//     public abstract int roll {get; set;}
+//     public abstract int age {get; set;}
+    
+// }
+// class Student : Person
+// {
+//     public override int roll
+//     {
+//         set
+//         {
+//             this.Roll= value;
+//         }
+//         get
+//         {
+//             return this.Roll;
+//         }
+//     }
+//     public override int age
+//     {
+//         set
+//         {
+//             this.Age= value;
+//         }
+//         get
+//         {
+//             return this.Age;
+//         }
+//     }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     { 
+//         Student obj=new Student();
+//         obj.roll=4857;
+//         obj.age=21;
+        
+//         Console.WriteLine($"Roll: {obj.roll}");
+//         Console.WriteLine($"Age: {obj.age}");
+//     }
+// }
+
+
+..........................................................................................................................
+
 using System;
 abstract class Person
 {
@@ -45,3 +96,6 @@ public class Program
         Console.WriteLine($"Age: {obj.age}");
     }
 }
+
+
+
