@@ -1,6 +1,14 @@
 using System;
 abstract class Person
 {
+    public Person()
+    {
+        Console.WriteLine("I am abstract Constructor");
+    }
+    ~Person()
+    {
+        Console.WriteLine("I am abstract Destructor");
+    }
     public string fname;
     public string lname;
     public string phoneNo;
@@ -89,6 +97,7 @@ public class Program
     }
 }
 //op
+//I am abstract Constructor
 // Student lives in: Mumbai
 // Name of student: Rahul Maurya
 // Phone-no of student: 7208477410
@@ -96,6 +105,7 @@ public class Program
 // Roll-no of student: 9027
 // Fees of student: 114000
 // ...........................
+//I am abstract Constructor
 // Teacher lives in: Thane
 // Name of Teacher: Surekha singh
 // Phone-no of Teacher: 9939454320
@@ -103,3 +113,5 @@ public class Program
 // Teacher ID: 6545
 // Qualification of Teacher: B.COM
 // College Name: SFIT
+//I am abstract Destructor
+//I am abstract Destructor
