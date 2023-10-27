@@ -1,0 +1,45 @@
+using System;
+interface i1
+{
+    void show();
+}
+interface i2
+{
+    void show();
+}
+//Explicit-implicit
+class myClass: i1,i2
+{
+    //explicit
+    void i1.show()
+    {
+        Console.WriteLine("I am Interface-1");
+    }
+    //implicit
+    public void show()
+    {
+        Console.WriteLine("I am Interface-2");
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+
+        myClass obj = new myClass();
+        ((i1)obj).show();
+        obj.show();
+        
+        //Canalso try by these method
+        i1 myinterface= new myClass();
+        myinterface.show();
+        
+        i2 myinterface1= new myClass();
+        myinterface1.show();
+    }
+}
+//op
+// I am Interface-1
+// I am Interface-2
+// I am Interface-1
+// I am Interface-2
