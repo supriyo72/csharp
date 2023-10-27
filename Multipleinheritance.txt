@@ -1,0 +1,75 @@
+//multiple inheritance in c# is done using class and interface
+// using System;
+// class Malestudent
+// {
+//     public void show1()
+//     {
+//         Console.WriteLine("I am male student");
+//     }
+// }
+// interface Femalestud
+// {
+//     void show2();
+// }
+// class myClass: Malestudent,Femalestud
+// {
+//     public void show2()
+//     {
+//         Console.WriteLine("I am Female student");
+//     }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         myClass obj1 = new myClass();
+//         obj1.show2();
+//         obj1.show1();
+//     }
+// }
+//op
+// I am Female student
+// I am male student
+
+
+
+using System;
+class Malestudent
+{
+    public void show()
+    {
+        Console.WriteLine("I am male student");
+    }
+}
+interface Femalestud
+{
+    void show();
+}
+class myClass: Malestudent,Femalestud
+{
+    void Femalestud.show()
+    {
+        Console.WriteLine("I am Female student");
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        //method-1
+        myClass obj1 = new myClass();
+        ((Femalestud)obj1).show();
+        obj1.show();
+        
+        Femalestud obj2= new myClass();
+        obj2.show();
+        
+        Malestudent obj3=new myClass();
+        obj3.show();
+    }
+}
+//op
+// I am Female student
+// I am male student
+// I am Female student
+// I am male student
