@@ -1,0 +1,16 @@
+ABSTRACT CLASS
+An abstract class can inherit a class and multiple interfaces.
+An abstract class can have methods with a body.
+An abstract class method is implemented using the override keyword.
+An abstract class is a better option when you need to implement common methods and declare common abstract methods.
+An abstract class can declare constructors and destructors.
+If you want to declare an abstract member in abstract class then abstract keyword is mandatory.	
+
+
+INTERFACE
+An interface can inherit multiple interfaces but cannot inherit a class.
+An interface cannot have methods with a body.
+An interface method is implemented without using the override keyword.
+An interface is a better option when you need to declare only abstract methods.
+An interface cannot declare constructors or destructors.
+If you want to declare an abstract member in interface then abstract keyword is not mandatory because members of interface are abstract by default.
