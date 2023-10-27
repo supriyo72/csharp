@@ -1,0 +1,35 @@
+using System;
+interface i1
+{
+    void print1();
+}
+abstract class myabstr
+{
+    public abstract void print2();
+}
+class myClass: myabstr,i1
+{
+    public void print1()
+    {
+        Console.WriteLine("Hii i am interface");
+    }
+    public override void print2()
+    {
+        Console.WriteLine("Hii i am abstract");
+    }
+    
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+
+        myClass obj = new myClass();
+        obj.print1();
+        obj.print2();
+    }
+}
+
+//op
+// Hii i am interface
+// Hii i am abstract
