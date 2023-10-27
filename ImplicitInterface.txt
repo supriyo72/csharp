@@ -1,0 +1,30 @@
+using System;
+interface i1
+{
+    void show();
+}
+interface i2
+{
+    void show();
+}
+//Implicit
+class myClass: i1,i2
+{
+    public void show()
+    {
+        Console.WriteLine("Hii i am interface 1!");
+    }
+    //error
+    // public void show()
+    // {
+    //     Console.WriteLine("Hii i am interface 1!");
+    // }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        myClass obj=new myClass();
+        obj.show();
+    }
+}
