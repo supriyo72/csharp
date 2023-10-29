@@ -1,0 +1,92 @@
+// using System;
+
+// class myClass
+// {
+//     int box;
+//     public myClass(int a)
+//     {
+//         this.box=a;
+//     }
+//     public int getClass()
+//     {
+//         return this.box;
+//     }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         myClass obj=new myClass(10);
+//         Console.WriteLine(obj.getClass());
+//     }
+// }
+//op
+//10
+
+
+
+
+// using System;
+
+// class myClass<T>
+// {
+//     T box;
+//     public myClass(T a)
+//     {
+//         this.box=a;
+//     }
+//     public T getClass()
+//     {
+//         return this.box;
+//     }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         myClass<int> obj=new myClass<int>(10);
+//         myClass<string> obj1=new myClass<string>("Supriyo");
+//         Console.WriteLine(obj.getClass());
+//         Console.WriteLine(obj1.getClass());
+//     }
+
+// }
+//op
+// 10
+// Supriyo
+
+
+
+using System;
+
+class myClass<T>
+{
+    T box;
+    public T setGet
+    {
+        set
+        {
+            this.box=value;
+        }
+        get
+        {
+           return this.box; 
+        }
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        myClass<int> obj=new myClass<int>();
+        myClass<string> obj1=new myClass<string>();
+        obj.setGet= 10;
+        obj1.setGet="Supriyo";
+        Console.WriteLine(obj.setGet);
+        Console.WriteLine(obj1.setGet);
+    }
+
+}
+//op
+// 10
+// Supriyo
