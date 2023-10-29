@@ -1,0 +1,111 @@
+// using System;
+
+// class classArray
+// {
+//     public static void showArray(int[] arr)
+//     {
+//         for(int i=0;i<arr.Length;i++)
+//         {
+//             Console.WriteLine(arr[i]);
+//         }
+//     }
+//     public static void showArray1(string[] arr)
+//     {
+//         for(int i=0;i<arr.Length;i++)
+//         {
+//             Console.WriteLine(arr[i]);
+//         }
+//     }
+//     public static void showArray2(char[] arr)
+//     {
+//         for(int i=0;i<arr.Length;i++)
+//         {
+//             Console.WriteLine(arr[i]);
+//         }
+//     }
+// }
+// public class Progran
+// {
+//     public static void Main(string[] args)
+//     {
+//         int[] numbers= new int[3];
+//         numbers[0]=45;
+//         numbers[1]=24;
+//         numbers[2]=37;
+        
+//         string[] names= new string[] {"Kalpesh","vikas","Aaman"};
+        
+//         char[] codes={'A','B','C'};
+        
+//         classArray.showArray(numbers);
+//         classArray.showArray1(names);
+//         classArray.showArray2(codes);
+//     }
+// }
+//op
+// 45
+// 24
+// 37
+// Kalpesh
+// vikas
+// Aaman
+// A
+// B
+// C
+
+
+
+
+
+
+//GENERICS
+using System;
+
+class classArray
+{
+    public static void showArray<T>(T[] arr)
+    {
+        for(int i=0;i<arr.Length;i++)
+        {
+            Console.WriteLine(arr[i]);
+        }
+    }
+    
+    public static bool Check<T>(T a,T b)
+    {
+        bool c= a.Equals(b);
+        return c;
+    }
+}
+public class Progran
+{
+    public static void Main(string[] args)
+    {
+        int[] numbers= new int[3];
+        numbers[0]=45;
+        numbers[1]=24;
+        numbers[2]=37;
+        
+        string[] names= new string[] {"Kalpesh","vikas","Aaman"};
+        
+        char[] codes={'A','B','C'};
+        
+        classArray.showArray(numbers);
+        classArray.showArray(names);
+        classArray.showArray(codes);
+        
+        Console.WriteLine(classArray.Check(10,20));
+        Console.WriteLine(classArray.Check("Aman","Aman"));
+        Console.WriteLine(classArray.Check('B','Z'));
+    }
+}
+//op
+// 45
+// 24
+// 37
+// Kalpesh
+// vikas
+// Aaman
+// A
+// B
+// C
