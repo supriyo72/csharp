@@ -11,9 +11,13 @@ public class Program
         ht.Add("Salary",45000.500);
         ht.Add("Designation","EXTC-Engineer");
         ht.Add("IsMarried",false);
+        ht.Add(101,'A');
+        ht.Add(206,"206 code");
+        ht.Add(365,"one-year");
         
         Console.WriteLine(ht["Designation"]);
-        
+        Console.WriteLine(ht["IsMarried"]);
+        Console.WriteLine(ht[365]);
         //2nd method
         Hashtable ht1= new Hashtable()
         {
