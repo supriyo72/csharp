@@ -1,0 +1,58 @@
+using System;
+using System.Collections;
+public class program
+{
+    public static void Main(string[] args)
+    {
+        int[] myArray = new int[3];
+        myArray[0]=455;
+        myArray[1]=875;
+        myArray[2]=24;
+        
+        Console.WriteLine(myArray.Length);
+        Array.Resize(ref myArray, 6);
+        Console.WriteLine("Modified length: "+myArray.Length);
+        
+        ArrayList al= new ArrayList();
+        Console.WriteLine(al.Capacity); //op-->0
+        al.Add(10);
+        Console.WriteLine(al.Capacity); //op-->4
+        al.Add("Raja");
+        al.Add('Z');
+        al.Add(10.23);
+        Console.WriteLine(al.Capacity); //op-->4
+        al.Add(100);
+        Console.WriteLine(al.Capacity);  //op-->8
+        
+        foreach(object obj in al)
+        {
+            Console.Write(obj+" ");
+        }
+        Console.WriteLine();
+        al.Insert(2,69);
+        
+        foreach(object obj in al)
+        {
+            Console.Write(obj+" ");
+        }
+        Console.WriteLine();
+        al.Remove(100);
+        al.RemoveAt(1);
+        foreach(object obj in al)
+        {
+            Console.Write(obj+" ");
+        }
+        Console.WriteLine();
+    }
+}
+
+//op
+// 3
+// Modified length: 6
+// 0
+// 4
+// 4
+// 8
+// 10 Raja Z 10.23 100
+// 10 Raja 69 Z 10.23 100 
+// 10 69 Z 10.23
