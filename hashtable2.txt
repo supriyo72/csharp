@@ -1,0 +1,71 @@
+using System;
+using System.Collections;
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        //1st method
+        Hashtable ht = new Hashtable();
+        ht.Add("ID",193);
+        ht.Add("Age",21);
+        ht.Add("Salary",45000.500);
+        ht.Add("Designation","EXTC-Engineer");
+        ht.Add("IsMarried",false);
+        ht.Add(101,'A');
+        ht.Add(206,"206 code");
+        ht.Add(365,"one-year");
+        
+        foreach(object details in ht.Keys)
+        {
+            Console.Write(details+" : "+ht[details]+" ");
+        }
+        Console.WriteLine();
+        
+        
+        Console.WriteLine(ht[206]);
+        ht.Remove("Salary");   //ht.Remove(key);
+        // ht.Clear();
+        Console.WriteLine(ht.Contains(365));
+        Console.WriteLine(ht.Contains("Mature"));
+        Console.WriteLine(ht.ContainsKey("Age"));
+        Console.WriteLine(ht.ContainsValue("one-year"));
+        
+        //gethashcode only gives codes for values
+        
+        Console.WriteLine("206 code".GetHashCode());
+        Console.WriteLine(45000.500.GetHashCode());
+        
+        Console.WriteLine(ht.Count);
+        Console.WriteLine(ht);
+      
+        // foreach(object key in ht.Keys)
+        // {
+        //     Console.Write(key+" ");
+        // }
+        // Console.WriteLine();
+
+
+        // foreach(object value in ht.Values)
+        // {
+        //     Console.Write(value+" ");
+        // }
+        // Console.WriteLine();
+
+      
+        // foreach(object key in ht.Keys)
+        // {
+        //     Console.Write(ht[key]+" ");
+        // }
+        // Console.WriteLine();
+
+      
+        // Console.WriteLine(".......................");
+    
+        foreach(object details in ht.Keys)
+        {
+            Console.Write(details+" : "+ht[details]+" ");
+        }
+        Console.WriteLine();
+
+    }
+}
