@@ -1,0 +1,27 @@
+using System;
+using System.Collections;
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        //1st method
+        Hashtable ht = new Hashtable();
+        ht.Add("ID",193);
+        ht.Add("Age",21);
+        ht.Add("Salary",45000.500);
+        ht.Add("Designation","EXTC-Engineer");
+        ht.Add("IsMarried",false);
+        
+        Console.WriteLine(ht["Designation"]);
+        
+        //2nd method
+        Hashtable ht1= new Hashtable()
+        {
+          {"ID",193},
+          {"Age",21},
+          {"Salary",45000.500},
+          {"IsMarried",false}
+        };
+        Console.WriteLine(ht1["Salary"]);
+    }
+}
