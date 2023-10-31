@@ -41,17 +41,24 @@ using System.Collections;
             
             // myStack.Clear();
             
-            myStack.Pop(); //Will remove Ansari
-            // myStack.Pop(); will remove null 
+            
+            Console.WriteLine("pop1: "+myStack.Pop()); //Will remove Ansari
+            Console.WriteLine("pop2: "+myStack.Pop()); //will remove false
+            myStack.Pop();  //pop3: will remove Adil
+            
             Console.WriteLine("------------------");
+            
+            
             foreach (object item in myStack)
             {
                 Console.WriteLine(item);
             }
 
+            string b= myStack.Peek().ToString(); 
+            Console.WriteLine("Peak2 name inside variable b : "+b);
+            
+            
             Console.ReadLine();
-
-
         }
 }
 //op
@@ -60,12 +67,14 @@ using System.Collections;
 // Adil
 // 5.11
 // 27
-//Adil
+// Adil
 // Peek name: Ansari
 // Peak name inside variable a : Ansari
+// pop1: Ansari
+// pop2: False
 // ------------------
-// False
-// Adil
 // 5.11
 // 27
 // Adil
+// Peak2 name inside variable b : 5.11
+
