@@ -1,0 +1,70 @@
+// Count (Property): Returns the total count of elements in the Stack.
+// Push(): Inserts an item at the top of the stack.
+// Peek(): Returns the top item from the stack.
+// Pop(): Removes and returns items from the top of the stack.
+// Contains(): Checks whether an item exists in the stack or not.
+// Clear(): Removes all items from the stack.
+
+//stack can contail null and duplicate values.
+using System;
+using System.Collections;
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Stack myStack = new Stack();
+            myStack.Push("Adil");
+            myStack.Push(27);
+            myStack.Push(5.11);
+            myStack.Push("Adil");
+            myStack.Push(false);
+            // myStack.Push(null);  //will print blank space
+            myStack.Push("Ansari");
+
+            // Console.WriteLine(myStack.Contains("Ali"));
+            
+            //Console.WriteLine(myStack.Count);
+            foreach (object item in myStack)
+            {
+                Console.WriteLine(item);
+            }
+            
+            Console.WriteLine("Peek name: "+myStack.Peek());
+            
+            //Can also store peak name in some variable
+            string a= myStack.Peek().ToString(); //converted to string becpz all the details in stack are of object type
+            
+            Console.WriteLine("Peak name inside variable a : "+a);
+            
+            // myStack.Clear();
+            
+            myStack.Pop(); //Will remove Ansari
+            // myStack.Pop(); will remove null 
+            Console.WriteLine("------------------");
+            foreach (object item in myStack)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ReadLine();
+
+
+        }
+}
+//op
+// Ansari
+// False
+// Adil
+// 5.11
+// 27
+//Adil
+// Peek name: Ansari
+// Peak name inside variable a : Ansari
+// ------------------
+// False
+// Adil
+// 5.11
+// 27
+// Adil
