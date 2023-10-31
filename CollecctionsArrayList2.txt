@@ -1,0 +1,29 @@
+using System;
+using System.Collections;
+public class program
+{
+    public static void Main(string[] args)
+    {
+        ArrayList al= new ArrayList(3);
+        Console.WriteLine("Capacity: "+al.Capacity); //op-->0
+        al.Add(10);
+        Console.WriteLine("Capacity: "+al.Capacity); //op-->0
+        al.Add("Raja");
+        al.Add('Z');
+        al.Add(10.23);
+        Console.WriteLine("Capacity: "+al.Capacity); //op-->6
+        al.Add(100);
+        
+        foreach(object obj in al)
+        {
+            Console.Write(obj+" ");
+        }
+        Console.WriteLine();
+        
+    }
+}
+//op
+// Capacity: 3
+// Capacity: 3
+// Capacity: 6
+// 10 Raja Z 10.23 100 
