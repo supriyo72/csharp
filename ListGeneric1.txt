@@ -19,9 +19,21 @@ public class program
             Console.Write(item+" ");
         }
         Console.WriteLine();
+        
+        List<string> names= new List<string>();
+        names.Add("Sumon");
+        names.Add("Radha");
+        names.Add("Kamal");
+        
+        foreach(string item1 in names)
+        {
+            Console.Write(item1+" ");
+        }
+        Console.WriteLine();
     }
 }
 //op
 // Capacity: 0
 // Capacity: 4
 // 10 566 100 6685 
+// Sumon Radha Kamal 
