@@ -1,0 +1,34 @@
+using System;
+using System.Collections;
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Queue myQueue = new Queue();
+            myQueue.Enqueue("Adil");
+            myQueue.Enqueue(27);
+            myQueue.Enqueue(5.11);
+            myQueue.Enqueue("Adil");
+            myQueue.Enqueue(false);
+            // myQueue.Enqueue(null);  //will print blank space
+            myQueue.Enqueue("Ansari");
+
+            Console.WriteLine(myQueue.Count);
+            while(myQueue.Count >0)
+            {
+                Console.WriteLine(myQueue.Dequeue());
+            }
+            Console.WriteLine(myQueue.Count);
+        }
+}
+//op
+// 6
+// Adil
+// 27
+// 5.11
+// Adil
+// False
+// Ansari
+// 0
