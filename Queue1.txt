@@ -1,0 +1,62 @@
+//queue
+// Count: Returns the total count of elements in the Queue.
+// Enqueue(): Adds an item into the queue.
+// Dequeue(): Removes and returns an item from the beginning of the queue.
+// Peek(): Returns first item from the queue
+// Contains(): Checks whether an item is in the queue or not
+// Clear(): Removes all the items from the queue.
+
+//queue can contail null and duplicate values.
+using System;
+using System.Collections;
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Queue myQueue = new Queue();
+            myQueue.Enqueue("Adil");
+            myQueue.Enqueue(27);
+            myQueue.Enqueue(5.11);
+            myQueue.Enqueue("Adil");
+            myQueue.Enqueue(false);
+            // myQueue.Enqueue(null);  //will print blank space
+            myQueue.Enqueue("Ansari");
+
+            Console.WriteLine("Count: "+myQueue.Count);
+            Console.WriteLine("Peek name: "+myQueue.Peek());
+            
+            Console.WriteLine(myQueue.Contains("Adil"));
+            foreach (object item in myQueue)  
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("Dequeue: "+myQueue.Dequeue());
+            Console.WriteLine("..............................");
+            // myQueue.Clear();
+            foreach (object item in myQueue)  
+            {
+                Console.WriteLine(item);
+            }
+
+        }
+}
+//op
+// Count: 6
+// Peek name: Adil
+// True
+// Adil
+// 27
+// 5.11
+// Adil
+// False
+// Ansari
+// Dequeue: Adil
+// ..............................
+// 27
+// 5.11
+// Adil
+// False
+// Ansari
+// True
