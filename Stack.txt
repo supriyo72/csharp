@@ -26,8 +26,8 @@ using System.Collections;
 
             // Console.WriteLine(myStack.Contains("Ali"));
             
-            //Console.WriteLine(myStack.Count);
-            foreach (object item in myStack)
+            Console.WriteLine("Count: "+myStack.Count);  //6
+            foreach (object item in myStack)  
             {
                 Console.WriteLine(item);
             }
@@ -38,7 +38,7 @@ using System.Collections;
             string a= myStack.Peek().ToString(); //converted to string becpz all the details in stack are of object type
             
             Console.WriteLine("Peak name inside variable a : "+a);
-            
+            Console.WriteLine("Count: "+myStack.Count); //6
             // myStack.Clear();
             
             
@@ -62,6 +62,7 @@ using System.Collections;
         }
 }
 //op
+//Count: 6
 // Ansari
 // False
 // Adil
@@ -70,6 +71,7 @@ using System.Collections;
 // Adil
 // Peek name: Ansari
 // Peak name inside variable a : Ansari
+//Count: 6
 // pop1: Ansari
 // pop2: False
 // ------------------
@@ -77,4 +79,6 @@ using System.Collections;
 // 27
 // Adil
 // Peak2 name inside variable b : 5.11
+
+
 
