@@ -1,3 +1,4 @@
+//stack- LIFO
 // Count (Property): Returns the total count of elements in the Stack.
 // Push(): Inserts an item at the top of the stack.
 // Peek(): Returns the top item from the stack.
