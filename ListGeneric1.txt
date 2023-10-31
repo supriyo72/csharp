@@ -1,0 +1,27 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+public class program
+{
+    public static void Main(string[] args)
+    {
+        List<int> myList= new List<int>();
+        Console.WriteLine("Capacity: "+myList.Capacity);  //0
+        myList.Add(10);
+        // myList.Add("Raja");   //error
+        myList.Add(566);
+        myList.Add(100);
+        myList.Add(6685);
+        Console.WriteLine("Capacity: "+myList.Capacity); //4
+        
+        foreach(int item in myList)
+        {
+            Console.Write(item+" ");
+        }
+        Console.WriteLine();
+    }
+}
+//op
+// Capacity: 0
+// Capacity: 4
+// 10 566 100 6685 
