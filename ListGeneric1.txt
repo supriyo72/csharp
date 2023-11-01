@@ -13,6 +13,7 @@ public class program
         myList.Add(100);
         myList.Add(6685);
         Console.WriteLine("Capacity: "+myList.Capacity); //4
+        Console.WriteLine(myList[2]);
         
         foreach(int item in myList)
         {
@@ -35,5 +36,6 @@ public class program
 //op
 // Capacity: 0
 // Capacity: 4
+//100
 // 10 566 100 6685 
 // Sumon Radha Kamal 
