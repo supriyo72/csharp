@@ -1,0 +1,65 @@
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        List<int> myList= new List<int>();
+        myList.Add(10);
+        myList.Add(566);
+        myList.Add(100);
+        myList.Add(6685);
+        myList.Add(45);
+        myList.Add(3);
+        
+        List<int> AddNo= new List<int>();
+        AddNo.Add(6500);
+        AddNo.Add(4500);
+        AddNo.Add(3200);
+        
+        foreach(int item in myList)
+        {
+            Console.Write(item+" ");
+        }
+        Console.WriteLine("..........................");
+        // myList.Sort();
+        // myList.AddRange(AddNo);
+        // myList.Insert(2,300000);
+        // myList.InsertRange(2,AddNo);
+        // myList.Remove(45);
+        // myList.RemoveAt(1);
+        // myList.RemoveRange(int index,int count);
+        myList.RemoveRange(2,3);
+        
+        foreach(int item in myList)
+        {
+            Console.Write(item+" ");
+        }
+        Console.WriteLine();
+        
+        
+        
+        //Sorting Strings
+        // List<string> names= new List<string>();
+        // names.Add("Sumon");
+        // names.Add("Radha");
+        // names.Add("Aman");
+        // names.Add("Radha");
+        // names.Add("Deepak");
+        
+        // foreach(string item1 in names)
+        // {
+        //     Console.Write(item1+" ");
+        // }
+        // Console.WriteLine(".............................");
+        // names.Sort();
+        // foreach(string item1 in names)
+        // {
+        //     Console.Write(item1+" ");
+        // }
+        // Console.WriteLine();
+    }
+}
