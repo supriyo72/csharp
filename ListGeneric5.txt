@@ -1,0 +1,78 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+class Employee
+{
+    public string name{get; set;}
+    public int age{get; set;}
+    public double salary{get; set;}
+}
+public class program
+{
+    public static void Main(string[] args)
+    {
+        Employee obj1 = new Employee();
+        obj1.name="Supriyo";
+        obj1.age=21;
+        obj1.salary=45000;
+        
+        Employee obj2 = new Employee()
+        {
+          name="Kamal",
+          age=24,
+          salary=35000
+        };
+        
+        Employee obj3 = new Employee()
+        {
+          name="Raj",
+          age=32,
+          salary=60000
+        };
+        
+        List<Employee> myList= new List<Employee>();
+        myList.Add(obj1);
+        myList.Add(obj2);
+        myList.Add(obj3);
+        
+        // foreach(Employee item in myList)
+        // {
+        //     Console.WriteLine($"Actual Details--> Name: {item.name}, Age: {item.age}, Salary: {item.salary}");
+        // }
+        
+            Employee[] emps = myList.ToArray();
+            foreach(Employee emp in emps)
+            {
+                Console.WriteLine("Employee Name is: {0} Age is: {1} Salary is: {2}", emp.name, emp.age, emp.salary);
+            }                          .
+            List<Employee> empl = emps.ToList();
+            Console.WriteLine("-------------------------");
+            foreach (Employee emp in empl)
+            {
+                Console.WriteLine("Employee Name is: {0} Age is: {1} Salary is: {2}", emp.name, emp.age, emp.salary);
+            }
+            
+
+        //FIND
+        // Employee obj= myList.Find((e) => e.age>20);
+        // Employee obj= myList.FindLast((e) => e.age>20);
+        // Console.WriteLine($"Details with age>20: Name: {obj.name}, Age: {obj.age}, Salary: {obj.salary}");
+        
+        //Findall
+        // List<Employee> obj= myList.FindAll((e) => e.age>22);
+        // foreach(Employee items in obj)
+        // {
+        //     Console.WriteLine($"FindAll Details with age>20--> Name: {items.name}, Age: {items.age}, Salary: {items.salary}");
+        // }
+        
+        //FindIndex and FindLastIndex
+        // Console.WriteLine("FindIndex: "+myList.FindIndex((eee) => eee.age>20));
+        // Console.WriteLine("FindLastIndex: "+myList.FindLastIndex((eee) => eee.age>20));
+        
+        // EXISTS
+        // Console.WriteLine(myList.Exists((ee)=> ee.name.StartsWith("R")));  //True
+        // Console.WriteLine(myList.Exists((ee)=> ee.name.StartsWith("Z")));  //False
+        Console.ReadLine();
+        
+    }
+}
