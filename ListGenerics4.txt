@@ -41,6 +41,7 @@ public class program
         // }
         
         //EXISTS
+        //in case of item we can write anything
         // Console.WriteLine(myList.Exists((item)=> item.name.StartsWith("R")));  //True
         // Console.WriteLine(myList.Exists((item)=> item.name.StartsWith("Z")));  //False
         
