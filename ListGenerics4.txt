@@ -1,0 +1,79 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+// class Employee
+// {
+//     public string name{get; set;}
+//     public int age{get; set;}
+//     public double salary{get; set;}
+// }
+public class program
+{
+    public static void Main(string[] args)
+    {
+        // Employee obj1 = new Employee();
+        // obj1.name="Supriyo";
+        // obj1.age=21;
+        // obj1.salary=45000;
+        
+        // Employee obj2 = new Employee()
+        // {
+        //   name="Kamal",
+        //   age=24,
+        //   salary=35000
+        // };
+        
+        // Employee obj3 = new Employee()
+        // {
+        //   name="Raj",
+        //   age=32,
+        //   salary=60000
+        // };
+        
+        // List<Employee> myList= new List<Employee>();
+        // myList.Add(obj1);
+        // myList.Add(obj2);
+        // myList.Add(obj3);
+        
+        // foreach(Employee item in myList)
+        // {
+        //     Console.WriteLine($"Name: {item.name}, Age: {item.age}, Salary: {item.salary}");
+        // }
+        
+        //EXISTS
+        // Console.WriteLine(myList.Exists((item)=> item.name.StartsWith("R")));  //True
+        // Console.WriteLine(myList.Exists((item)=> item.name.StartsWith("Z")));  //False
+        
+        
+        List<int> myList= new List<int>();
+        myList.Add(10);
+        myList.Add(566);
+        myList.Add(100);
+        myList.Add(6685);
+        myList.Add(45);
+        myList.Add(3);
+        myList.Add(100);
+
+        foreach(int item in myList)
+        {
+            Console.Write(item+" ");
+        }
+        Console.WriteLine("..........................");
+
+        // Console.WriteLine(myList.Contains(45));
+        // myList.Reverse();
+        // Console.WriteLine(myList.IndexOf(100));  //op 2
+        //here 100 is repeating
+        //Console.WriteLine(myList.IndexOf(int item,int index)); 
+        // Console.WriteLine(myList.IndexOf(100,3)); //op 6
+        // Console.WriteLine(myList.LastIndexOf(100));  //op 6
+        // Console.WriteLine(myList.IndexOf(45));   //op 4
+        
+        
+        foreach(int item in myList)
+        {
+            Console.Write(item+" ");
+        }
+        Console.WriteLine();
+    }
+}
