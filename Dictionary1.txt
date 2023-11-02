@@ -1,0 +1,45 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Dictionary<string,string> myDict = new Dictionary<string,string>(); 
+        
+        myDict.Add("active", "ready to engage in physically energetic pursuits");
+        myDict.Add("amazing", "causing great surprise or wonder");
+        myDict.Add("honest", "free of deceit, truthful and sincere");
+        myDict.Add("patriotic", "expressing devotion to and vigorous support for one's country.");
+        myDict.Add("quarantine", "place of isolation");
+        
+        Console.WriteLine(myDict["honest"]);
+        
+        foreach(KeyValuePair<string,string> obj in myDict)
+        {
+            Console.WriteLine("Key: "+obj.Key+" Value: "+obj.Value);
+        }
+        foreach(var obj in myDict)
+        {
+            Console.WriteLine("Key: "+obj.Key+" Value: "+obj.Value);
+        }
+        foreach(string obj1 in myDict.Keys)
+        {
+            Console.WriteLine(obj1);
+        }
+        foreach(string obj1 in myDict.Keys)
+        {
+            Console.WriteLine($"Key: {obj1} Values: {myDict[obj1]}");
+        }
+        foreach(string obj2 in myDict.Values)
+        {
+            Console.WriteLine(obj2);
+        }
+        
+        Dictionary<int,string> myDict1 = new Dictionary<int,string>(); 
+        
+        myDict1.Add(1, "Abc");
+        myDict1.Add(33, "Def Ghi");
+        myDict1.Add(43, "Kjl Mno");
+    }
+}
