@@ -1,0 +1,78 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+class Employee
+{
+    public string name{get; set;}
+    public int age{get; set;}
+    public double salary{get; set;}
+    public int id{get; set;}
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Dictionary<string,string> myDict = new Dictionary<string,string>(); 
+        
+        myDict.Add("active", "ready to engage in physically energetic pursuits");
+        myDict.Add("amazing", "causing great surprise or wonder");
+        myDict.Add("honest", "free of deceit, truthful and sincere");
+        myDict.Add("patriotic", "expressing devotion to and vigorous support for one's country.");
+        myDict.Add("quarantine", "place of isolation");
+        
+        
+        
+        
+        Employee obj1 = new Employee();
+        obj1.name="Supriyo";
+        obj1.age=21;
+        obj1.salary=45000;
+        obj1.id=25;
+        
+        Employee obj2 = new Employee()
+        {
+          name="Kamal",
+          age=24,
+          salary=35000,
+          id=14
+        };
+        
+        Employee obj3 = new Employee()
+        {
+          name="Raj",
+          age=32,
+          salary=60000,
+          id=75
+        };
+        
+        Dictionary<int,Employee> myDict1 = new Dictionary<int,Employee>();
+        myDict1.Add(obj1.id,obj1);
+        myDict1.Add(obj2.id,obj2);
+        myDict1.Add(obj3.id,obj2);
+        
+        foreach(int key in myDict1.Keys)
+        {
+            Console.WriteLine($"{key}, Name: {myDict1[key].name}, Age: {myDict1[key].age}, salary: {myDict1[key].salary}, id: {myDict1[key].id}");
+        }
+        foreach(Employee item in myDict1.Values)
+        {
+            Console.WriteLine($"Name: {item.name}, Age: {item.age}, salary: {item.salary}, id: {item.id}");
+        }
+        foreach(KeyValuePair<int,Employee> item1 in myDict1)
+        {
+            Console.WriteLine($"ID:{item1.Key} Name: {item1.Value.name}, Age: {item1.Value.age}, salary: {item1.Value.salary}, id: {item1.Value.id}");
+            
+        }
+        
+    }
+}
+//op
+// 25, Name: Supriyo, Age: 21, salary: 45000, id: 25
+// 14, Name: Kamal, Age: 24, salary: 35000, id: 14
+// 75, Name: Kamal, Age: 24, salary: 35000, id: 14
+// Name: Supriyo, Age: 21, salary: 45000, id: 25
+// Name: Kamal, Age: 24, salary: 35000, id: 14
+// Name: Kamal, Age: 24, salary: 35000, id: 14
+// ID:25 Name: Supriyo, Age: 21, salary: 45000, id: 25
+// ID:14 Name: Kamal, Age: 24, salary: 35000, id: 14
+// ID:75 Name: Kamal, Age: 24, salary: 35000, id: 14
