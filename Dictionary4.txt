@@ -1,0 +1,53 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Dictionary<string,string> myDict = new Dictionary<string,string>(); 
+        
+        myDict.Add("active", "ready to engage in physically energetic pursuits");
+        myDict.Add("amazing", "causing great surprise or wonder");
+        myDict.Add("honest", "free of deceit, truthful and sincere");
+        myDict.Add("patriotic", "expressing devotion to and vigorous support for one's country.");
+        myDict.Add("quarantine", "place of isolation");
+        myDict.Add("Supriyo",null);
+        
+        
+        string value;
+        if(myDict.TryGetValue("immature",out value))
+        {
+            Console.WriteLine("Key Found");
+        }else
+        {
+            Console.WriteLine("Key Not Found");
+        }
+        // string val;
+        // myDict.TryGetValue("amazing",out val);
+        // Console.WriteLine(val);  //op causing great surprise or wonder
+        
+        // Console.WriteLine(myDict.ContainsKey("honest"));
+        // Console.WriteLine(myDict.ContainsValue("causing great surprise or wonder"));
+        
+        // if(myDict.ContainsKey("mature"))
+        // {
+        //     Console.WriteLine("Key Found");
+        // }else
+        // {
+        //     Console.WriteLine("Key Not Found");
+        // }
+        foreach(KeyValuePair<string,string> obj in myDict)
+        {
+            Console.WriteLine("Key: "+obj.Key+" Value: "+obj.Value);
+        }
+        // myDict.Remove("quarantine");
+        // myDict.Clear();
+        // foreach(KeyValuePair<string,string> obj in myDict)
+        // {
+        //     Console.WriteLine("Key: "+obj.Key+" Value: "+obj.Value);
+        // }
+        
+    }
+}
