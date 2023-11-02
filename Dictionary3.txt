@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+class Employee
+{
+    public int id{get; set;}
+    public string name{get; set;}
+    public int age{get; set;}
+    public double salary{get; set;}
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+            Employee obj1 = new Employee();
+                obj1.id = 111;
+                obj1.name = "Ali";
+                obj1.age = 26;
+                obj1.salary = 15000;
+
+            Employee obj2 = new Employee()
+            {
+                id = 222,
+                name = "Asad",
+                age = 45,
+                salary = 12000
+            };
+
+            Employee obj3 = new Employee()
+            {
+                id = 333,
+                name = "Zain",
+                age = 31,
+                salary = 8000
+            };
+
+            Dictionary<int, Employee> myDict1 = new Dictionary<int, Employee>();
+            myDict1.Add(obj1.id, obj1);
+            myDict1.Add(obj2.id, obj2);
+            myDict1.Add(obj3.id, obj3);
+
+    Console.WriteLine(myDict1.Count(emp => emp.Value.name.StartsWith("B"))); //op 0 
+    Console.WriteLine(myDict1.Count(e => e.Value.age>40)); //op 1
+    
+    
+        
+    }
+}
+//op
+0
+1
