@@ -48,7 +48,7 @@ public class Program
         Dictionary<int,Employee> myDict1 = new Dictionary<int,Employee>();
         myDict1.Add(obj1.id,obj1);
         myDict1.Add(obj2.id,obj2);
-        myDict1.Add(obj3.id,obj2);
+        myDict1.Add(obj3.id,obj3);
         
         foreach(int key in myDict1.Keys)
         {
@@ -69,10 +69,10 @@ public class Program
 //op
 // 25, Name: Supriyo, Age: 21, salary: 45000, id: 25
 // 14, Name: Kamal, Age: 24, salary: 35000, id: 14
-// 75, Name: Kamal, Age: 24, salary: 35000, id: 14
+// 75, Name: Raj, Age: 32, salary: 60000, id: 75
 // Name: Supriyo, Age: 21, salary: 45000, id: 25
 // Name: Kamal, Age: 24, salary: 35000, id: 14
-// Name: Kamal, Age: 24, salary: 35000, id: 14
+// Name: Raj, Age: 32, salary: 60000, id: 75
 // ID:25 Name: Supriyo, Age: 21, salary: 45000, id: 25
 // ID:14 Name: Kamal, Age: 24, salary: 35000, id: 14
-// ID:75 Name: Kamal, Age: 24, salary: 35000, id: 14
+// ID:75 Name: Raj, Age: 32, salary: 60000, id: 75
