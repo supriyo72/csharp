@@ -51,3 +51,11 @@ public class HelloWorld
         
     }
 }
+//op
+// Key Not Found
+// Key: active Value: ready to engage in physically energetic pursuits
+// Key: amazing Value: causing great surprise or wonder
+// Key: honest Value: free of deceit, truthful and sincere
+// Key: patriotic Value: expressing devotion to and vigorous support for one's country.
+// Key: quarantine Value: place of isolation
+// Key: Supriyo Value: 
