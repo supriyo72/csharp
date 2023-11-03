@@ -1,0 +1,33 @@
+using System;
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter length");
+        int n= int.Parse(Console.ReadLine());
+        int[] arr= new int[n];
+        try
+        {
+            arr[0]=14;
+            arr[1]=55;
+            arr[2]=254;
+            arr[3]=64;
+            arr[4]=5456;
+            
+            foreach(int i in arr)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        catch(IndexOutOfRangeException ex)
+        {
+            Console.WriteLine("You have exceeded the length of array");
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
+//op
+// Enter length
+// 3
+// You have exceeded the length of array
+// Index was outside the bounds of the array.
