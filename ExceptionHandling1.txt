@@ -1,0 +1,34 @@
+using System;
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter a");
+        int a= int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter b");
+        int b= int.Parse(Console.ReadLine());
+        
+        try
+        {
+            int res= a/b;
+            Console.WriteLine($"The result is: {res}");
+            
+        }
+        catch(DivideByZeroException ex)
+        {
+            Console.WriteLine("You cannot divide a no by zero");
+            Console.WriteLine(ex.Message);
+        }
+        Console.WriteLine("Remaining statement-1");
+        Console.WriteLine("Remaining statement-2");
+    }
+}
+//op
+// Enter a
+// 45
+// Enter b
+// 0
+// You cannot divide a no by zero
+// Attempted to divide by zero.
+// Remaining statement-1
+// Remaining statement-2
