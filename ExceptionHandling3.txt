@@ -1,0 +1,21 @@
+using System;
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        try
+        {
+            string name= null;
+            // string name="Supriyo"; 
+            Console.WriteLine(name.Length);
+        }
+        catch(NullReferenceException ex)
+        {
+            Console.WriteLine("Name box is empty");
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
+//op
+// Name box is empty
+// Object reference not set to an instance of an object.
