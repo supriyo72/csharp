@@ -1,0 +1,32 @@
+using System;
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        try
+        {
+            // int no= int.Parse(Console.ReadLine());
+            // Console.WriteLine($"ID: {no}");
+            
+            // int[] arr= new int[4];
+            // arr[0]=14;
+            // arr[1]=55;
+            // arr[2]=254;
+            // arr[3]=64;
+            // arr[4]=5456;
+            // foreach(int i in arr)
+            // {
+            //     Console.WriteLine(i);
+            // }
+            
+            string name= null;
+            Console.WriteLine(name.Length);
+
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
+//will give output accordingly with the help of Exception at catch block
