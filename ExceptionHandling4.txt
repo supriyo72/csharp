@@ -1,0 +1,23 @@
+using System;
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        try
+        {
+            Console.WriteLine("Write a no: ");
+            int no= int.Parse(Console.ReadLine());
+            Console.WriteLine($"ID: {no}");
+        }
+        catch(FormatException ex)
+        {
+            Console.WriteLine("No format is invalid");
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
+//op
+// Write a no: 
+// Abcd
+// No format is invalid
+// Input string was not in a correct format.
