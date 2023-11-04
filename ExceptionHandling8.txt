@@ -1,0 +1,105 @@
+// using System;
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         Console.WriteLine("Enter your age: ");
+//         int age= int.Parse(Console.ReadLine());
+        
+//         if(age>=18)
+//         {
+//             Console.WriteLine("You are eligible");
+//         }else
+//         {
+//             throw new Exception("You are not eligible");
+//         }
+        
+//     }
+// }
+
+
+
+//op
+// Enter your age: 
+// 14
+// Unhandled Exception:
+// System.Exception: You are not eligible
+//   at Program.Main (System.String[] args) [0x0002c] in <02de91ac078d482882bcf78fb2972a35>:0 
+// [ERROR] FATAL UNHANDLED EXCEPTION: System.Exception: You are not eligible
+//   at Program.Main (System.String[] args) [0x0002c] in <02de91ac078d482882bcf78fb2972a35>:0 
+
+
+// using System;
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         Console.WriteLine("Enter your age: ");
+//         int age= int.Parse(Console.ReadLine());
+        
+//         try
+//         {
+//             if(age>=18)
+//             {
+//                 Console.WriteLine("You are eligible to vote");
+//             }else
+//             {
+//                 throw new Exception("You are not eligible to vote");
+//             }
+//         }
+//         catch(Exception ex)
+//         {
+//             Console.WriteLine(ex.Message);
+//         }
+        
+//     }
+// }
+
+//op
+// Enter your age: 
+// 12
+// You are not eligible to vote
+
+
+
+
+using System;
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter your account balance: ");
+        int balance= int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter the withdrawl amount: ");
+        int withdraw= int.Parse(Console.ReadLine());
+        
+        try
+        {
+            if(withdraw>balance)
+            {
+                throw new Exception("Insufficient balance");
+            }else
+            {
+                int Current_Balance= balance-withdraw;
+                Console.WriteLine($"Your remaining balance is: {Current_Balance}");
+            }
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        
+    }
+}
+//op
+// Enter your account balance: 
+// 15000
+// Enter the withdrawl amount: 
+// 5000
+// Your remaining balance is: 10000
+
+// Enter your account balance: 
+// 5000
+// Enter the withdrawl amount: 
+// 10000
+// Insufficient balance
