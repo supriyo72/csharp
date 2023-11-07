@@ -1,0 +1,50 @@
+using System;
+
+class student<T>
+{
+    public void Add(T a,T b)
+    {
+        dynamic d1=a;
+        dynamic d2=b;
+        Console.WriteLine(d1+d2);
+    }
+    public void Sub(T a,T b)
+    {
+        dynamic d1=a;
+        dynamic d2=b;
+        Console.WriteLine(d1-d2);
+    }
+    public void Div(T a,T b)
+    {
+        dynamic d1=a;
+        dynamic d2=b;
+        Console.WriteLine(d1/d2);
+    }
+    public void Mul(T a,T b)
+    {
+        dynamic d1=a;
+        dynamic d2=b;
+        Console.WriteLine(d1*d2);
+    }
+}
+class Program {
+  static void Main() {
+    student<int> obj=new student<int>();
+    obj.Add(45,30);
+    obj.Sub(25,13);
+    obj.Mul(10,10);
+    
+    student<float> obj1=new student<float>();
+    obj1.Add(52.24f,52.15f);
+    obj1.Sub(25.45f,13.65f);
+    obj1.Mul(10.45f,10.14f);
+    
+  }
+}
+//op
+// 75
+// 12
+// 100
+// 104.39
+// 11.8
+// 105.963
