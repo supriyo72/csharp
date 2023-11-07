@@ -1,0 +1,93 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+class Employee:IComparable<Employee>
+{
+    public string name{get; set;}
+    public int age{get; set;}
+    public double salary{get; set;}
+    
+    //logic for sort and can also reverse if we write Student.Reverse()
+    public int CompareTo(Employee other)
+    {
+        if(this.age>other.age)
+        {
+            return 1;
+        }else if(this.age<other.age)
+        {
+            return -1;
+        }else{
+            return 0;
+        }
+    }
+}   
+    class CompareSalary: IComparer<Employee>
+    {
+        public int Compare(Employee x,Employee y)
+        {
+            if(x.salary>y.salary)
+            {
+                return 1;
+            }else if(x.salary<y.salary)
+            {
+                return -1;
+            }else{
+                return 0;
+            }
+        }
+    }
+    //logic for reverse..will sort in reverse order
+    // public int CompareTo(Employee other)
+    // {
+    //     if(this.age>other.age)
+    //     {
+    //         return -1;
+    //     }else if(this.age<other.age)
+    //     {
+    //         return 1;
+    //     }else{
+    //         return 0;
+    //     }
+    // }
+
+public class program
+{
+    public static void Main(string[] args)
+    {
+        Employee obj1 = new Employee();
+        obj1.name="Supriyo";
+        obj1.age=21;
+        obj1.salary=45000;
+        
+        Employee obj2 = new Employee()
+        {
+          name="Kamal",
+          age=24,
+          salary=35000
+        };
+        
+        Employee obj3 = new Employee()
+        {
+          name="Raj",
+          age=32,
+          salary=60000
+        };
+        Employee obj4 = new Employee()
+        {
+          name="Supu",
+          age=26,
+          salary=45000
+        };
+        
+        List<Employee> myList= new List<Employee>() {obj1,obj2,obj3,obj4};
+        
+        CompareSalary obj=new CompareSalary();
+        // myList.Sort();
+        myList.Sort(obj);
+        // myList.Reverse();
+        foreach(Employee item in myList)
+        {
+            Console.WriteLine($"Name: {item.name}, Age: {item.age}, Salary: {item.salary}");
+        }
+    }
+}
