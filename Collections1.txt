@@ -1,0 +1,26 @@
+using System;
+class student
+{
+    public bool Compare<T>(T a,T b)
+    {
+        if(a.Equals(b))
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+    }
+}
+class Program {
+  static void Main() {
+    student obj=new student();
+    Console.WriteLine(obj.Compare<float>(10.5f,10.5f));
+    Console.WriteLine(obj.Compare<int>(45,65));
+    Console.WriteLine(obj.Compare<double>(54.50,54.50));
+  }
+}
+//op
+// True
+// False
+// True
