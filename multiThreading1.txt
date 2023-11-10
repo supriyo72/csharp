@@ -37,5 +37,10 @@ class Program {
     Program.show1();
     Program.show2();
     Program.show3();
+
+//can also write like these as show methods are static
+    //show1();
+    //show2();
+    //show3();
   }
 }
