@@ -1,0 +1,45 @@
+using System;
+using System.Threading;
+class Program {
+    public static void show1()
+    {
+        for(int i=1;i<=50;i++)
+        {
+            Console.WriteLine("show1: "+i);
+        }
+    }
+    public static void show2()
+    {
+        for(int i=1;i<=50;i++)
+        {
+            Console.WriteLine("show2: "+i);
+            // if(i==25)
+            // {
+            //     Console.WriteLine("Thread is sleeping for 8 second");
+            //     Thread.Sleep(8000);
+            // }
+            
+        }
+    }
+    public static void show3()
+    {
+        for(int i=1;i<=50;i++)
+        {
+            Console.WriteLine("show3: "+i);
+        }
+    }
+  static void Main() {
+      
+    // Thread t= Thread.CurrentThread;
+    // t.Name= "Main Thread";
+    // Console.WriteLine(Thread.CurrentThread.Name);
+    
+    Thread t1 = new Thread(show1);
+    Thread t2 = new Thread(show2);
+    Thread t3 = new Thread(show3);
+    t1.Start();
+    t2.Start();
+    t3.Start();
+    
+  }
+}
