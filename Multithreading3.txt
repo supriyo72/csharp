@@ -1,0 +1,199 @@
+using System;
+using System.Threading;
+class Program {
+    public static void show1()
+    {
+        for(int i=1;i<=50;i++)
+        {
+            Console.WriteLine("show1: "+i);
+        }
+        Console.WriteLine("Show-1 ENDS");
+    }
+    public static void show2()
+    {
+        for(int i=1;i<=50;i++)
+        {
+            Console.WriteLine("show2: "+i);
+            if(i==25)
+            {
+                Console.WriteLine("show-2 is sleeping for 8 second");
+                Thread.Sleep(8000);
+                Console.WriteLine("show-2 woke up");
+            }
+        }
+        Console.WriteLine("Show-2 ENDS");
+    }
+    public static void show3()
+    {
+        for(int i=1;i<=50;i++)
+        {
+            Console.WriteLine("show3: "+i);
+        }
+        Console.WriteLine("Show-3 ENDS");
+    }
+  static void Main() {
+    Thread t1 = new Thread(show1);
+    Thread t2 = new Thread(show2);
+    Thread t3 = new Thread(show3);
+    t1.Start();
+    t2.Start();
+    t3.Start();
+    
+  }
+}
+//op
+show2: 1
+show2: 2
+show3: 1
+show3: 2
+show3: 3
+show3: 4
+show3: 5
+show3: 6
+show3: 7
+show3: 8
+show3: 9
+show3: 10
+show3: 11
+show3: 12
+show2: 3
+show2: 4
+show1: 1
+show1: 2
+show1: 3
+show1: 4
+show1: 5
+show1: 6
+show1: 7
+show1: 8
+show1: 9
+show1: 10
+show1: 11
+show1: 12
+show1: 13
+show2: 5
+show2: 6
+show1: 14
+show3: 13
+show3: 14
+show3: 15
+show3: 16
+show3: 17
+show3: 18
+show3: 19
+show3: 20
+show3: 21
+show3: 22
+show3: 23
+show3: 24
+show3: 25
+show3: 26
+show3: 27
+show3: 28
+show3: 29
+show3: 30
+show3: 31
+show2: 7
+show2: 8
+show2: 9
+show2: 10
+show2: 11
+show2: 12
+show2: 13
+show2: 14
+show2: 15
+show2: 16
+show2: 17
+show2: 18
+show2: 19
+show2: 20
+show2: 21
+show2: 22
+show1: 15
+show1: 16
+show1: 17
+show1: 18
+show1: 19
+show1: 20
+show1: 21
+show1: 22
+show1: 23
+show1: 24
+show1: 25
+show1: 26
+show1: 27
+show1: 28
+show2: 23
+show2: 24
+show2: 25
+show-2 is sleeping for 8 second
+show3: 32
+show3: 33
+show3: 34
+show3: 35
+show3: 36
+show1: 29
+show1: 30
+show1: 31
+show1: 32
+show1: 33
+show1: 34
+show1: 35
+show1: 36
+show1: 37
+show1: 38
+show1: 39
+show1: 40
+show1: 41
+show1: 42
+show1: 43
+show1: 44
+show1: 45
+show1: 46
+show1: 47
+show1: 48
+show1: 49
+show1: 50
+show3: 37
+show3: 38
+show3: 39
+show3: 40
+show3: 41
+show3: 42
+show3: 43
+show3: 44
+show3: 45
+show3: 46
+show3: 47
+show3: 48
+show3: 49
+show3: 50
+Show-3 ENDS
+Show-1 ENDS
+show-2 woke up
+show2: 26
+show2: 27
+show2: 28
+show2: 29
+show2: 30
+show2: 31
+show2: 32
+show2: 33
+show2: 34
+show2: 35
+show2: 36
+show2: 37
+show2: 38
+show2: 39
+show2: 40
+show2: 41
+show2: 42
+show2: 43
+show2: 44
+show2: 45
+show2: 46
+show2: 47
+show2: 48
+show2: 49
+show2: 50
+Show-2 ENDS
