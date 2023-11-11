@@ -1,0 +1,78 @@
+/*
+using System;
+using System.Threading;
+class Program {
+    public void Display()
+    {
+        Console.Write("[C# is a ");
+        Thread.Sleep(5000);
+        Console.WriteLine("object oriented programming language]");
+    }
+  static void Main() {
+    Program obj= new Program();
+    obj.Display();
+    obj.Display();
+  }
+}
+*/
+
+//op
+// [C# is a object oriented programming language]
+// [C# is a object oriented programming language]
+
+
+/*
+using System;
+using System.Threading;
+class Program {
+    public void Display()
+    {
+        Console.Write("[C# is a ");
+        Thread.Sleep(5000);
+        Console.WriteLine("object oriented programming language]");
+    }
+  static void Main() {
+    Program obj= new Program();
+    
+    Thread t1=new Thread(obj.Display);
+    Thread t2=new Thread(obj.Display);
+    t1.Start();
+    t2.Start();
+  }
+}
+*/
+
+//op
+// [C# is a [C# is a object oriented programming language]
+// object oriented programming language]
+
+
+
+using System;
+using System.Threading;
+class Program {
+    public void Display()
+    {
+        lock (this)
+        {
+        Console.Write("[C# is a ");
+        Thread.Sleep(5000);
+        Console.WriteLine("object oriented programming language]");
+        }
+    }
+  static void Main() {
+    Program obj= new Program();
+    
+    Thread t1=new Thread(obj.Display);
+    Thread t2=new Thread(obj.Display);
+    Thread t3=new Thread(obj.Display);
+    t1.Start();
+    t2.Start();
+    t3.Start();
+  }
+}
+
+//op
+// [C# is a object oriented programming language]
+// [C# is a object oriented programming language]
+// [C# is a object oriented programming language]
