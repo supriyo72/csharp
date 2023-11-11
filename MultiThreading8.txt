@@ -1,0 +1,98 @@
+/*
+using System;
+using System.Threading;
+class Program {
+    static long Count1;
+    static long Count2;
+    
+    public static void Increment1()
+    {
+        while(true)
+        {
+            Count1+=1;
+        }
+    }
+    public static void Increment2()
+    {
+        while(true)
+        {
+            Count2+=1;
+        }
+    }
+  static void Main() {
+    
+    Thread t1=new Thread(Increment1);
+    Thread t2=new Thread(Increment2);
+
+    t1.Start();
+    t2.Start();
+    
+    Console.WriteLine("Main Thread Starts");
+    Thread.Sleep(5000);
+    Console.WriteLine("Main Thread Ends");
+    
+    t1.Abort();
+    t2.Abort();
+
+    t1.Join(); t2.Join();
+    Console.WriteLine("Count1: "+Count1);
+    Console.WriteLine("Count2: "+Count2);
+  }
+}
+*/
+//op
+// Main Thread Starts
+// Main Thread Ends
+// Count1: 887667918
+// Count2: 916926722
+
+
+
+using System;
+using System.Threading;
+class Program {
+    static long Count1;
+    static long Count2;
+    
+    public static void Increment1()
+    {
+        while(true)
+        {
+            Count1+=1;
+        }
+    }
+    public static void Increment2()
+    {
+        while(true)
+        {
+            Count2+=1;
+        }
+    }
+  static void Main() {
+    
+    Thread t1=new Thread(Increment1);
+    Thread t2=new Thread(Increment2);
+
+    t1.Priority= ThreadPriority.Highest;
+    t2.Priority= ThreadPriority.Lowest;
+    
+    t1.Start();
+    t2.Start();
+    
+    Console.WriteLine("Main Thread Starts");
+    Thread.Sleep(5000);
+    Console.WriteLine("Main Thread Ends");
+    
+    t1.Abort();
+    t2.Abort();
+
+    t1.Join(); t2.Join();
+    Console.WriteLine("Count1: "+Count1);
+    Console.WriteLine("Count2: "+Count2);
+  }
+}
+//op
+// Main Thread Starts
+// Main Thread Ends
+// Count1: 1051224134
+// Count2: 874522667
