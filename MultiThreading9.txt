@@ -1,0 +1,51 @@
+using System;
+using System.Threading;
+using System.Diagnostics;
+class Program {
+    public static void Increment1()
+    {
+        long Count1=0;
+        for(int i=0;i<100000001;i++)
+        {
+            Count1++;
+        }
+        Console.WriteLine($"Count-1: {Count1}");
+    }
+    public static void Increment2()
+    {
+        long Count2=0;
+        for(int i=0;i<100000001;i++)
+        {
+            Count2++;
+        }
+        Console.WriteLine($"Count-2: {Count2}");
+    }
+  static void Main() {
+    Thread t1= new Thread(Increment1);
+    Thread t2= new Thread(Increment2);
+    
+    Stopwatch s1=new Stopwatch();
+    Stopwatch s2=new Stopwatch();
+    
+    s1.Start();
+    Program.Increment1();
+    Program.Increment2();
+    s1.Stop();
+    
+    s2.Start();
+    t1.Start();
+    t2.Start();
+    s2.Stop();
+    
+    t1.Join(); t2.Join();
+    Console.WriteLine("S1: "+s1.ElapsedMilliseconds);
+    Console.WriteLine("S2: "+s2.ElapsedMilliseconds);
+  }
+}
+//op
+// Count-1: 100000001
+// Count-2: 100000001
+// Count-2: 100000001
+// Count-1: 100000001
+// S1: 248
+// S2: 1
