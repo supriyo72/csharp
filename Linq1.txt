@@ -14,3 +14,22 @@ public class Program
         Console.WriteLine(" ");
     }
 }
+
+
+
+// using System;
+// using System.Linq;
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         int[] arr= {45,21,65,79,85,42,12,13,24,98};
+//         var brr= from i in arr orderby i descending select i;
+        
+//         foreach(int res in brr)
+//         {
+//             Console.Write(res+" ");
+//         }
+//         Console.WriteLine(" ");
+//     }
+// }
