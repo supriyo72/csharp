@@ -10,9 +10,6 @@ public class HelloWorld
         b= bool.Parse(Console.ReadLine());
         Console.WriteLine("After assigment: ");
         Console.WriteLine(b);
-        before assigment:
-
-
     }
 }
 
