@@ -4,7 +4,7 @@
 //instance var ke andar instance+static use kr skhta hoon
 
 using System;
-class Student
+class Student6
 {
     public int age;
     public char grade;
@@ -24,17 +24,24 @@ class Student
     {
         return fees;
     }
+    // public static int getsalaryincrement(){
+    //     return sal/10;
+    // }
     public static int getsalaryincrement(int sal){
         return sal/10;
     }
+    public static void staticdetails()
+    {
+        Console.WriteLine($"School: {SchoolName},fees: {fees}");
+    }
     
 }
-class Program
+class Program6
 {
     
     public static void Main(string[] args)
     {
-        Student obj=new Student();
+        Student6 obj=new Student6();
         
         obj.age=21;
         obj.grade='B';
@@ -43,7 +50,7 @@ class Program
         obj.Lname="Ghosh";
         
         
-        Student obj1=new Student();
+        Student6 obj1=new Student6();
         obj1.age=35;
         obj1.grade='A';
         obj1.roll=25874;
@@ -52,10 +59,10 @@ class Program
         
         obj.StudDetails();
         obj1.StudDetails();
-        Console.WriteLine("School: "+Student.SchoolName);
-        Console.WriteLine("Fees: "+Student.getFees());
-        Console.WriteLine("salary increment: "+Student.getsalaryincrement(150000));
+        Console.WriteLine("School: "+Student6.SchoolName);
+        Console.WriteLine("Fees: "+Student6.getFees());
+        // Console.WriteLine("salary increment: "+Student6.getsalaryincrement());
+        Console.WriteLine("salary increment: "+Student6.getsalaryincrement(15100));
+        Student6.staticdetails();
     }
 }
- 
- 
