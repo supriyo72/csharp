@@ -61,3 +61,60 @@ using System;
             Console.ReadLine();
         }
     }
+
+
+....................................................................................................................................................
+using System;
+    class Example
+    {
+        public static int salary;
+        public static int a;
+        private Example()
+        {
+            Console.WriteLine("I am Private");
+        }
+        private Example(string comp_name)
+        {
+            Console.WriteLine($"Company: {comp_name}");
+        }
+        public Example(string comp_name,string loc)
+        {
+            Console.WriteLine($"Company: {comp_name},location: {loc}");
+        }
+        public static int ExampleDetails()
+        {
+            return salary;
+        }
+        public static void time()
+        {
+            Console.WriteLine(DateTime.Now);
+        }
+        //error
+        // public Example()
+        // {
+        //     Console.WriteLine($"Salary: {salary}");
+        // }
+
+        //error
+        // public Example(string comp_name)
+        // {
+        //     Console.WriteLine($"Company: {comp_name}");
+        // }
+        
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           Example.salary=45000;
+        // Example obj= new Example();  -->error due to its protection level
+        // Example obj= new Example("Tcs");     -->error
+           Example obj= new Example("Tcs","mumbai");
+           Console.WriteLine(Example.ExampleDetails());
+           Example.time();
+        }
+    }
+//op
+Company: Tcs,location: mumbai
+45000
+12/2/2023 2:23:02 PM
