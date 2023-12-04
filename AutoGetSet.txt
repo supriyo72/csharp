@@ -57,8 +57,8 @@ class Student
     
     public Student(string fname,string lname)
     {
-        firstname=fname;
-        lastname=lname;
+        this.firstname=fname;
+        this.lastname=lname;
     }
 }
 public class Program
