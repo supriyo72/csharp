@@ -104,3 +104,64 @@ public class Program
 
 
 
+
+
+
+using System;
+// class University
+// {
+//     private static string UniversityName;
+//     private static int age;
+    
+//     public static string _UniversityName
+//     {
+//         set
+//         {
+//             if(string.IsNullOrEmpty(value)==true)
+//             {
+//                 Console.WriteLine("Write Valid name!..");
+//             }
+//             else
+//             {
+//                 UniversityName= value;
+//             }
+            
+//         }
+//         get
+//         {
+//             return UniversityName;
+//         }
+//     }
+    
+//     public static int _age
+//     {
+//         set
+//         {
+//             if(value>0)
+//             {
+//                 age=value;
+//             }
+//             else
+//             {
+//                 Console.WriteLine("invalid age");
+//             }
+            
+//         }
+//         get
+//         {
+//             return age;
+//         }
+//     }
+// }
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         University._UniversityName=null;
+//         Console.WriteLine(University._UniversityName);
+//         University._age=-45;
+//         Console.WriteLine(University._age);
+//     }
+// }
+
+
