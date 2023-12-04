@@ -27,6 +27,8 @@ using System;
 
 
 
+
+
 class University
 {
     private static string UniversityName;
@@ -59,4 +61,46 @@ public class Program
         Console.WriteLine(University._UniversityName);
     }
 }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+using System;
+class University
+{
+    private static string name;
+    private static int id;
+    
+    public static void setName(string Name)
+    {
+        name=Name;
+    }
+    public static void setId(int Id)
+    {
+        id=Id;
+    }
+    public static int getId()
+    {
+        return id;
+    }
+    public static string getName()
+    {
+        return name;
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        University.setName("SFIT");
+        University.setId(450);
+        
+        Console.WriteLine(University.getName());
+        Console.WriteLine(University.getId());
+    }
+}
+
+
 
