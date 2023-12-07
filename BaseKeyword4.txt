@@ -1,0 +1,32 @@
+using System;
+class Company
+{
+    public int id;
+    public string name;
+    
+    public virtual void CompanyDetails(int id,string name)
+    {
+        Console.WriteLine($"Person id:{id}, name:{name}");
+    }
+}
+class Employee: Company
+{
+    public int ssn;
+    public override void CompanyDetails(int id,string name)
+    {
+        base.CompanyDetails(id,name);
+        Console.WriteLine($"Person ssn:{ssn}");
+    }
+}
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Employee obj1= new Employee();
+        obj1.id=454;
+        obj1.name="Raja";
+        obj1.ssn=45578;
+        obj1.CompanyDetails(obj1.id,obj1.name);
+    }
+}
