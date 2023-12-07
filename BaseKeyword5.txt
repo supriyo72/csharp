@@ -1,0 +1,76 @@
+using System;
+class First
+{
+    public int a,b,c;
+    public First()
+    {
+        a=0;
+        b=0;
+        c=0;
+    }
+    public First(int p)
+    {
+        a=b=c=p;
+    }
+    public First(int p,int q)
+    {
+        a=p;
+        b=q;
+        c=p+q;
+    }
+    public First(int p,int q,int r)
+    {
+        a=p;
+        b=q;
+        c=r;
+    }
+    public void show()
+    {
+        Console.WriteLine($"A: {a}");
+        Console.WriteLine($"B: {b}");
+        Console.WriteLine($"C: {c}");
+    }
+}
+class Second: First
+{
+    public int d;
+    public Second():base()
+    {
+        d=0;
+    }
+    public Second(int p):base(p)
+    {
+        d=p;
+    }
+    public Second(int p,int q):base(p,q)
+    {
+        d=p*q;
+    }
+    public Second(int p,int q,int r):base(p,q,r)
+    {
+        d=p+q+r;
+    }
+    public void disp()
+    {
+        show();
+        Console.WriteLine($"D: {d}");
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+         Second obj1 = new Second();
+         Second obj2 = new Second(15);
+         Second obj3 = new Second(14,35);
+         Second obj4 = new Second(10,20,25);
+         
+         obj1.disp();
+         Console.WriteLine(".......");
+         obj2.disp();
+         Console.WriteLine(".......");
+         obj3.disp();
+         Console.WriteLine(".......");
+         obj4.disp();
+    }
+}
