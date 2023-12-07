@@ -1,0 +1,41 @@
+using System;
+class Company
+{
+    public int id;
+    public string name;
+    public double salary;
+    
+    public Company(int Id,string Name,double Salary)
+    {
+        this.id=Id;
+        this.name=Name;
+        this.salary=Salary;
+    }
+    public void CompanyDetails()
+    {
+        Console.WriteLine($"Name: {name}, id: {id}, salary:{salary}");
+    }
+}
+class Employee: Company
+{
+    public string location;
+    public Employee(string Location,int Id,string Name,double Salary): base(Id,Name,Salary)
+    {
+        this.location=Location;
+    }
+    public void EmployeeDetails()
+    {
+        Console.WriteLine($"Name: {name}, id: {id}, salary:{salary}, location:{location}");
+    }
+    
+}
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Employee obj1= new Employee("Mumbai",25,"Supriyo",40000);
+        obj1.CompanyDetails();
+        obj1.EmployeeDetails();
+    }
+}
