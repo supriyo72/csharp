@@ -58,3 +58,29 @@ public class Program
         },5);
     }
 }
+
+
+
+
+
+
+using System;
+public delegate void calc(int num1,int num2);
+public class Program
+{
+    public static void display(calc c,int z)
+    {
+        int res1=z+15;
+        int res2=z+20;
+        c.Invoke(res1,res2);
+    }
+    public static void Main(string[] args)
+    {
+        Program.display( delegate(int a,int b)
+        {
+            int res2=a+14+b;
+            Console.WriteLine(res2);
+        },5);
+    }
+}
+
