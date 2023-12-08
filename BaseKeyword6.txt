@@ -1,0 +1,33 @@
+using System;
+class Company
+{
+    int id= 45874;
+    string name="Manohar singh Rathore";
+    
+    public virtual void CompanyDetails()
+    {
+        Console.WriteLine($"Person id:{id}, name:{name}");
+    }
+    public void Hello()
+    {
+        Console.WriteLine("Hello Everyone");
+    }
+}
+class Employee: Company
+{
+    int ssn=450;
+    public override void CompanyDetails()
+    {
+        base.Hello();
+        Console.WriteLine($"Person ssn:{ssn}");
+    }
+}
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Company obj1= new Employee();
+        obj1.CompanyDetails();
+    }
+}
