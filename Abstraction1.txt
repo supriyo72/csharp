@@ -39,6 +39,8 @@ public class Program
     {
         Customer obj = new Customer(193027,"Supriyo",54214);
         obj.Details();
+        // obj.Salary();
+        // error CS0122: 'Customer.Salary()' is inaccessible due to its protection level
     }
 }
 
