@@ -81,3 +81,76 @@ public class Program
 // I am print-2
 // I am print-3
 // I am print-2
+..........................................................................
+
+
+
+
+using System;
+//Interface-Inheritance
+interface i1
+{
+    void print1();
+}
+interface i2
+{
+    void print2();
+}
+interface i3: i1,i2
+{
+    void print3();
+}
+class interfaceMethod1 : i3
+{
+    public void Random1()
+    {
+        Console.WriteLine("I am random1 of interfacemethod1");
+    }
+    public void print1()
+    {
+        Console.WriteLine("I am print-1 of interfacemethod1");
+    }
+    public void print2()
+    {
+        Console.WriteLine("I am print-2  of interfacemethod1");
+    }
+    public void print3()
+    {
+        Console.WriteLine("I am print-3 of interfacemethod1");
+    }
+}
+class interfaceMethod2 : i2
+{
+    public void Random2()
+    {
+        Console.WriteLine("I am random2 of interfacemethod2");
+    }
+    public void print2()
+    {
+        Console.WriteLine("I am print-2 of interfacemethod2");
+    }
+}
+class interfaceMethod3 : interfaceMethod1
+{
+     public void Random3()
+    {
+        Console.WriteLine("I am random3 of interfacemethod3");
+    }
+}
+public class Program8
+{
+    public static void Main(string[] args)
+    {
+        interfaceMethod3 obj2=new interfaceMethod3();
+        obj2.Random3();
+        obj2.print2();
+        obj2.print1();
+        obj2.print3();
+
+    }
+}
+//op
+// I am random3 of interfacemethod3
+// I am print-2  of interfacemethod1
+// I am print-1 of interfacemethod1
+// I am print-3 of interfacemethod1
