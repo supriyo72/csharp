@@ -2,6 +2,7 @@
 //if i implements an abstract class and does not implement an abstract method of abstract class i will get an error but  
 //if i make my class abstract i won't get an error
 //abstract method does not have body
+
 using System;
 abstract class Person
 {
@@ -17,7 +18,7 @@ abstract class Person
     public string lname;
     public string phoneNo;
     public int age;
-    public string location;
+    private string location;
     
     public string address
     {
@@ -77,9 +78,9 @@ public class Program
         obj1.age=21;
         obj1.roll=9027;
         obj1.fees=114000;
-        obj1.location="Mumbai";
+        obj1.address="Mumbai";
         
-        Console.WriteLine($"Student lives in: {obj1.location}");
+        Console.WriteLine($"Student lives in: {obj1.address}");
         obj1.showDetails();
         
         Console.WriteLine("...........................");
@@ -92,9 +93,9 @@ public class Program
         obj2.tid=6545;
         obj2.qualification="B.COM";
         
-        obj2.location="Thane";
+        obj2.address="Thane";
         
-        Console.WriteLine($"Teacher lives in: {obj2.location}");
+        Console.WriteLine($"Teacher lives in: {obj2.address}");
         obj2.showDetails();
         Console.WriteLine("College Name: "+Person.College);
         
