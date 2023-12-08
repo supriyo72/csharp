@@ -65,27 +65,21 @@ public class Program
         i2 myInterface1= new interfaceMethod2();
         myInterface1.print2();
         // myInterface1.Random2();    --->error
+
+        i2 myInterface2= new interfaceMethod1();
+        myInterface2.print2();
+        myInterface2.print1(); //error
         
         
         
     }
 }
-//op
-// I am random2
-// I am print-2
-// I am random1
-// I am print-1
-// I am print-2
-// I am print-3
-// I am print-1
-// I am print-2
-// I am print-3
-// I am print-2
-..........................................................................
 
 
 
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 using System;
 //Interface-Inheritance
 interface i1
