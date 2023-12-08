@@ -1,3 +1,6 @@
+//we cannot instantiate abstract class
+//if i implements an abstract class and does not implement an abstract method of abstract class i will get an error but  
+//if i make my class abstract i won't get an error
 using System;
 abstract class Person
 {
