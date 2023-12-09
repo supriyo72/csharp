@@ -1,0 +1,120 @@
+using System;
+abstract class Company
+{
+    public Company()
+    {
+        Console.WriteLine("I am a default constructor");
+    }
+    ~Company()
+    {
+        Console.WriteLine("I am a destructor");
+    }
+    public string firstname;
+    public string lastname;
+    public int id;
+    private string address;
+    
+    public string location
+    {
+        set
+        {
+            this.address= value;
+        }
+        get
+        {
+            return this.address;
+        }
+    }
+    public static string CompanyName= "Capgemini";
+    public abstract void showDetails();
+}
+class Employee:Company
+{
+    public int empId;
+    
+    public override void showDetails()
+    {
+        string fullname= this.firstname+" "+this.lastname;
+        Console.WriteLine($"Fullname: {fullname}");
+        Console.WriteLine($"Id:{id}");
+        Console.WriteLine($"Employee-Id: {empId}");
+    }
+}
+abstract class staff:Company
+{
+    public int staffId;
+    public void StaffDetails()
+    {
+        Console.WriteLine($"FirstName: {firstname}");
+        Console.WriteLine($"LastName: {lastname}");
+        Console.WriteLine($"Id:{id}");
+        Console.WriteLine($"Staff-id: {staffId}");
+    }
+    
+}
+class staff2:staff
+{
+    public override void showDetails()
+    {
+        Console.WriteLine($"Firstname: {firstname}");
+        Console.WriteLine($"Lastname: {lastname}");
+        Console.WriteLine($"Id:{id}");
+        Console.WriteLine($"staff-Id: {staffId}");
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Employee obj1= new Employee();
+        obj1.firstname="Supriyo";
+        obj1.lastname="ghosh";
+        obj1.id=25;
+        obj1.location="Mumbai";
+        obj1.empId=193027;
+        
+        obj1.showDetails();
+        Console.WriteLine($"Company name: {Company.CompanyName}");
+        Console.WriteLine($"Address: {obj1.location}");
+        
+        staff2 obj2= new staff2();
+        obj2.firstname="Aman";
+        obj2.lastname="Rajput";
+        obj2.id=47;
+        obj2.location="Pune";
+        obj2.staffId=789;
+        Console.WriteLine($"Address: {obj2.location}");
+        
+        obj2.StaffDetails();
+        
+        staff2 obj3= new staff2();
+        obj3.firstname="deepak";
+        obj3.lastname="jaiswal";
+        obj3.id=546;
+        obj3.staffId=4528;
+        obj3.showDetails();
+    }
+}
+
+
+//op
+// I am a default constructor
+// Fullname: Supriyo ghosh
+// Id:25
+// Employee-Id: 193027
+// Company name: Capgemini
+// Address: Mumbai
+// I am a default constructor
+// Address: Pune
+// FirstName: Aman
+// LastName: Rajput
+// Id:47
+// Staff-id: 789
+// I am a default constructor
+// Firstname: deepak
+// Lastname: jaiswal
+// Id:546
+// staff-Id: 4528
+// I am a destructor
+// I am a destructor
+// I am a destructor
