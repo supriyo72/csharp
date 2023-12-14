@@ -2,4 +2,4 @@ hashtable:
 Contains,ContainsKey,ContainsValue,Remove,Add,Count,Clear,GethashCode
 
 List:
-Add,AddRange,Remove,RemoveAt,RemoveRange,Insert,Insertrange,Contains,Clear,Count,Exists,Find,FindLast,FindIndex,FindLastIndex,FindAll,can conert to array
+Add,AddRange,Remove,RemoveAt,RemoveRange(int index,int length),Insert,Insertrange,Contains,Clear,Count,Exists,Find,FindLast,FindIndex,FindLastIndex,FindAll,can conert to array,IndexOf,LastIndexOf,Contains,Reverse,Sort,IndexOf(int index,int item),LastIndexOf(int index,int item)
