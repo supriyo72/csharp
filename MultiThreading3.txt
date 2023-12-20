@@ -197,3 +197,76 @@ show2: 48
 show2: 49
 show2: 50
 Show-2 ENDS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+................................................................................................................................................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.Threading;
+
+class Program
+{
+    public static void show1()
+    {
+        for(int i=0;i<25;i++)
+        {
+            Console.WriteLine("Show1: "+i);
+        }
+    }
+    public static void show2()
+    {
+        for(int i=0;i<25;i++)
+        {
+            Console.WriteLine("Show2: "+i);
+        }
+    }
+    public static void show3()
+    {
+        for(int i=0;i<25;i++)
+        {
+            Console.WriteLine("Show3: "+i);
+        }
+    }
+}
+public class Hello
+{
+    public static void Main(string[] args)
+    {
+        // Thread t= Thread.CurrentThread;
+        // t.Name="Supriyo";
+        // Console.WriteLine(Thread.CurrentThread.Name);
+        
+        // Program.show1();
+        // Program.show2();
+        
+        Thread t1=new Thread(Program.show1);
+        Thread t2=new Thread(Program.show2);
+        t1.Start();
+        t2.Start();
+    }
+}
