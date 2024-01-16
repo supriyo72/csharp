@@ -222,3 +222,63 @@ public class Program
 //op
 // Manan jain  LTIMindtree
 // deepak rathore
+
+
+
+
+using System;
+class Employee
+{
+    public void show()
+    {
+        Console.WriteLine ("I am parent class");
+    }
+}
+class Staff: Employee
+{
+    public void show()
+    {
+        Console.WriteLine ("I am child class");
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Employee obj = new Staff();
+        obj.show();
+        
+    }
+}
+
+//op
+I am parent class
+
+
+
+// //method hiding
+using System;
+
+class Employee
+{
+    public void show()
+    {
+        Console.WriteLine ("I am parent class");
+    }
+}
+class Staff: Employee
+{
+    public void show()
+    {
+        Console.WriteLine ("I am child class");
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Employee obj = new Employee();
+        obj.show();
+        //op I am parent class
+    }
+}
